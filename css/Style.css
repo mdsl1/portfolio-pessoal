@@ -155,7 +155,7 @@ nav{
 
 /*Texto de boas vindas*/
 #introduction{
-    margin: 3.5% 0 2% 0;
+    margin: 5% 0 2% 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -229,7 +229,7 @@ nav{
     justify-content: center;
 }
 .cardProject{
-    margin: 2%;
+    margin: 1%;
     width: 40rem;
     height: 40rem;
     background-color: var(--bg-cards);
@@ -301,5 +301,7 @@ footer p{
     #projectsContainer{
         display: flex;
         flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
