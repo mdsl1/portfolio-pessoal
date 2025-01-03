@@ -142,6 +142,9 @@ nav{
     background: none;
     border: none;
 }
+#dropdownColorMode .dropdown-toggle::after{
+    display: none;
+}
 #dropdownColorMode .dropdown-menu{
     background-color: var(--bg-dropdown-color);
 }
@@ -155,7 +158,7 @@ nav{
 
 /*Texto de boas vindas*/
 #introduction{
-    margin: 5% 0 2% 0;
+    margin: 5rem 0 2% 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -227,26 +230,30 @@ nav{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
 }
 .cardProject{
-    margin: 1%;
-    width: 40rem;
-    height: 40rem;
+    margin: 2%;
+    width: 35rem;
+    height: fit-content;
     background-color: var(--bg-cards);
     align-items: center;
     border: var(--bg-button-hover) 5px double;
+    border-radius: 30px;
+    overflow: hidden;
     text-align: center;
     justify-content: center;
 }
 .cardProject img{
     width: 100%;
+    margin-bottom: 1%;
 }
 .line{
     width: 90%;
-    height: 0.7%;
+    height: 2.5px;
     background-color: var(--bg-button-hover);
     margin: 2% auto;
-    border-radius: 15%;
+    border-radius: 10px;
 }
 .cardProject h3{
     margin: 2% 0 3% 0;
@@ -255,7 +262,7 @@ nav{
     text-decoration: var(--text-underline);
     font-size: 1.6rem;
 }
-.cardProject p{
+.cardProject p :not(.platformContainer p){
     font-size: 1.3rem;
     margin-bottom: 5%;
 }
@@ -265,17 +272,29 @@ nav{
     justify-content: center;
     align-items: center;
     margin-bottom: 3%;
+    height: 10%;
+}
+.platformContainer p{
+    font-size: 1.2rem;
+    margin: 0;
 }
 .platformContainer svg{
     width: 3rem;
     height: 3rem;
     fill: var(--fill-logo-color);
-    margin-bottom: 4%;
+}
+.buttonContainer{
+    height: 9%;
+    margin: 3% 0;
+    gap: 5%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    text-align: center;
 }
 .cardProject a, .cardProject a:visited{
     color: var(--text-button);
     padding: 2% 10%;
-    margin: 2% 1%;
     background-color: var(--bg-button);
     border-radius: 10px;
     text-decoration: none;
@@ -297,11 +316,63 @@ footer p{
 
 /*Responsividade*/
 /*Tamanho para arrumar a navbar*/
-@media (min-width:970px) and (max-width:1232px){
-    #projectsContainer{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
+
+@media (max-width:800px){
+    #introduction h1{
+        font-size: 2rem;
+    }
+    #myPhoto{
+        width: 12rem;
+        height: 12rem;
+    }
+}
+@media (max-width: 735px){
+    *{
+        font-size: 0.9rem;
+    }
+    #myPhoto{
+        width: 11rem;
+        height: 11rem;
+    }
+    #introduction h1{
+        font-size: 1.9rem;
+    }
+    #aboutMe h2{
+        font-size: 1.8rem;
+    }
+    #projects h2{
+        font-size: 1.8rem;
+    }
+    .cardProject{
+        width: 30rem;
+        height: 30rem;
+    }
+}
+@media (max-width: 500px){
+    *{
+        font-size: 0.7rem;
+    }
+    #navContent{
+        margin: 0 4%;
+    }
+    #introduction h1{
+        font-size: 1.5rem;
+    }
+    #introduction p{
+        font-size: 1.3rem;
+    }
+    #myPhoto{
+        width: 9rem;
+        height: 9rem;
+    }
+    #aboutMe p{
+        margin: 2% 0;
+        line-height: 1.5rem;
+    }
+    .cardProject p:not(.platformContainer>p){
+        font-size: 1.1rem;
+    }
+    .cardProject a, .cardProject a:visited{
+        font-size: 1.2rem;
     }
 }
