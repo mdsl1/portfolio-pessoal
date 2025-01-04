@@ -32,6 +32,9 @@
     /*Decorações*/
     --neon-title: #ffffff 1px 1px 20px;
     --text-underline: none;
+    /*Cores do alerta de projeto em andamento*/
+    --bg-work-in-progress-color: #f00;
+    --text-work-in-progress-color: #fff;
 }
 .lightMode:root{
     /*Cores de texto*/
@@ -57,6 +60,9 @@
     /*Decorações*/
     --neon-title: #00446c 1px 1px 5px;
     --text-underline: none;
+    /*Cores do alerta de projeto em andamento*/
+    --bg-work-in-progress-color: #dc0101;
+    --text-work-in-progress-color: #fff;
 }
 .colorBlindMode:root{
     /*Cores de texto*/
@@ -82,6 +88,9 @@
     /*Decorações*/
     --neon-title: none;
     --text-underline: underline;
+    /*Cores do alerta de projeto em andamento*/
+    --bg-work-in-progress-color: #000;
+    --text-work-in-progress-color: #fff;
 }
 
 /*Configurações do site*/
@@ -303,6 +312,12 @@ nav{
     background-color: var(--bg-button-hover);
     text-shadow: var(--neon-title);
     text-decoration: var(--text-underline);
+}
+.workInProgress{
+    color: var(--text-work-in-progress-color);
+    background-color: var(--bg-work-in-progress-color);
+    padding: 2% 10%;
+    border-radius: 10px;
 }
 
 /*Rodapé*/
