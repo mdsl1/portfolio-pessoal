@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exemplo Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    svg{
+      width: 2rem;
+      height: 2rem;
+      fill: #f00;
+    }
+    #dropdownColorMode .dropdown-toggle{
+      font-size: 2rem;
+      color: var(--fill-logo-color);
+      background: none;
+      border: none;
+    }
+    #dropdownColorMode .dropdown-toggle::after{
+        display: none;
+    }
+    #dropdownColorMode .dropdown-menu{
+        background-color: var(--bg-dropdown-color);
+    }
+    #dropdownColorMode .dropdown-item, #dropdownColorMode .dropdown-item:visited{
+        color: var(--title-color);
+    }
+    #dropdownColorMode .dropdown-item:hover{
+        color: var(--text-dropdown-color);
+        background-color: var(--bg-dropdown-hover-color);
+    }
+  </style>
+</head>
+<body>
+
+<!-- 1. NAVBAR RESPONSIVA -->
+<nav class="navbar bg-dark text-white p-2 position-sticky">
+  <div class="container-fluid">
+    <div class="row w-100 align-items-center">
+      <!-- Coluna esquerda com ícones -->
+      <div class="col-9 d-flex gap-3 align-items-center">
+        <p class="m-0 fs-4 fs-md-3">mdsl1</p>
+        <!--GitHub-->
+        <a href="https://github.com/mdsl1" target="_blank"><svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" viewBox="-74.4 -120.90175 644.8 725.4105"><path d="M165.9 389.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2 .6-2-1.3-4.3-4.3-5.2-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 0C106.1 0 0 105.3 0 244c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5 21.3 0 42.8 2.9 62.8 8.5 0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 449.8 496 354.9 496 244 496 105.3 383.5 0 244.8 0zM97.2 344.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+        <!--LinkedIn-->
+        <a href="https://www.linkedin.com/in/marcos-daniel-da-silva-lima-091b11260/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.493675 -16.3118 99.61185 97.8708"><path d="M72.865 61.1094a1.2 1.2 0 001.21-1.269c0-.9-.543-1.33-1.657-1.33h-1.8v4.712h.677v-2.054h.832l.019.025 1.291 2.029h.724l-1.389-2.1zm-.783-.472h-.785v-1.593h.995c.514 0 1.1.084 1.1.757 0 .774-.593.836-1.314.836m-16.873-5.433h-9.6v-15.034c0-3.585-.064-8.2-4.993-8.2-5 0-5.765 3.906-5.765 7.939v15.294h-9.6v-30.916h9.216v4.225h.129a10.1 10.1 0 019.093-4.994c9.73 0 11.524 6.4 11.524 14.726zm-40.79-35.143a5.571 5.571 0 115.57-5.572 5.571 5.571 0 01-5.57 5.572m4.8 35.143h-9.61v-30.917h9.61zm40.776-55.2H4.781A4.728 4.728 0 000 4.6744v55.439a4.731 4.731 0 004.781 4.675h55.21a4.741 4.741 0 004.8-4.675V4.6704a4.738 4.738 0 00-4.8-4.67"/><path d="M72.164 56.4114a4.418 4.418 0 10.085 0h-.085m0 8.33a3.874 3.874 0 113.809-3.938v.065a3.791 3.791 0 01-3.708 3.871h-.1"/></svg></a>
+        <!--Gmail-->
+        <a href="mailto:marcos.d.s.lima1408@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-13.2 -16.50405 114.4 99.0243"><path  d="M6 66.0162h14v-34l-20-15v43c0 3.315 2.685 6 6 6z"/><path d="M68 66.0162h14c3.315 0 6-2.685 6-6v-43l-20 15z"/><path d="M68 6.0162v26l20-15v-8c0-7.415-8.465-11.65-14.4-7.2z"/><path d="M20 32.0162v-26l24 18 24-18v26l-24 18z"/><path d="M0 9.0162v8l20 15v-26l-5.6-4.2c-5.935-4.45-14.4-.215-14.4 7.2z"/></svg></a>
+        <!--Instagram-->
+        <a href="https://www.instagram.com/mdsl.01/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-100.7682 -167.947 873.3244 1007.682"><path d="M335.895 0c-91.224 0-102.663.387-138.49 2.021-35.752 1.631-60.169 7.31-81.535 15.612-22.088 8.584-40.82 20.07-59.493 38.743-18.674 18.673-30.16 37.407-38.743 59.495C9.33 137.236 3.653 161.653 2.02 197.405.386 233.232 0 244.671 0 335.895c0 91.222.386 102.661 2.02 138.488 1.633 35.752 7.31 60.169 15.614 81.534 8.584 22.088 20.07 40.82 38.743 59.495 18.674 18.673 37.405 30.159 59.493 38.743 21.366 8.302 45.783 13.98 81.535 15.612 35.827 1.634 47.266 2.021 138.49 2.021 91.222 0 102.661-.387 138.488-2.021 35.752-1.631 60.169-7.31 81.534-15.612 22.088-8.584 40.82-20.07 59.495-38.743 18.673-18.675 30.159-37.407 38.743-59.495 8.302-21.365 13.981-45.782 15.612-81.534 1.634-35.827 2.021-47.266 2.021-138.488 0-91.224-.387-102.663-2.021-138.49-1.631-35.752-7.31-60.169-15.612-81.534-8.584-22.088-20.07-40.822-38.743-59.495-18.675-18.673-37.407-30.159-59.495-38.743-21.365-8.302-45.782-13.981-81.534-15.612C438.556.387 427.117 0 335.895 0zm0 60.521c89.686 0 100.31.343 135.729 1.959 32.75 1.493 50.535 6.965 62.37 11.565 15.68 6.094 26.869 13.372 38.622 25.126 11.755 11.754 19.033 22.944 25.127 38.622 4.6 11.836 10.072 29.622 11.565 62.371 1.616 35.419 1.959 46.043 1.959 135.73 0 89.687-.343 100.311-1.959 135.73-1.493 32.75-6.965 50.535-11.565 62.37-6.094 15.68-13.372 26.869-25.127 38.622-11.753 11.755-22.943 19.033-38.621 25.127-11.836 4.6-29.622 10.072-62.371 11.565-35.413 1.616-46.036 1.959-135.73 1.959-89.694 0-100.315-.343-135.73-1.96-32.75-1.492-50.535-6.964-62.37-11.564-15.68-6.094-26.869-13.372-38.622-25.127-11.754-11.753-19.033-22.943-25.127-38.621-4.6-11.836-10.071-29.622-11.565-62.371-1.616-35.419-1.959-46.043-1.959-135.73 0-89.687.343-100.311 1.959-135.73 1.494-32.75 6.965-50.535 11.565-62.37 6.094-15.68 13.373-26.869 25.126-38.622 11.754-11.755 22.944-19.033 38.622-25.127 11.836-4.6 29.622-10.072 62.371-11.565 35.419-1.616 46.043-1.959 135.73-1.959"/><path d="M335.895 447.859c-61.838 0-111.966-50.128-111.966-111.964 0-61.838 50.128-111.966 111.966-111.966 61.836 0 111.964 50.128 111.964 111.966 0 61.836-50.128 111.964-111.964 111.964zm0-284.451c-95.263 0-172.487 77.224-172.487 172.487 0 95.261 77.224 172.485 172.487 172.485 95.261 0 172.485-77.224 172.485-172.485 0-95.263-77.224-172.487-172.485-172.487m219.608-6.815c0 22.262-18.047 40.307-40.308 40.307-22.26 0-40.307-18.045-40.307-40.307 0-22.261 18.047-40.308 40.307-40.308 22.261 0 40.308 18.047 40.308 40.308"/></svg></a>
+        <!--Youtube-->
+        <a href="https://www.youtube.com/@Mdsl-1" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-35.20005 -41.33325 305.0671 247.9995"><path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849"></svg></a>
+      </div>
+      <!-- Coluna direita com botão alinhado à direita -->
+      <div class="col-3 d-flex justify-content-end">
+        <div class="dropdown" id="dropdownColorMode">
+          <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">⚙</button>
+          <ul class="dropdown-menu">
+              <li><button onclick="defaultMode()" class="dropdown-item" href="#">Modo Padrão</button></li>
+              <li><button onclick="lightMode()" class="dropdown-item" href="#">Modo Claro</button></li>
+              <li><button onclick="colorBlindMode()" class="dropdown-item" href="#">Modo Daltônico</button></li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- 2. SESSÃO COM IMAGEM E TEXTO EM DUAS COLUNAS -->
+<section class="container my-5">
+  <div class="row align-items-center">
+    <!-- Coluna da imagem menor -->
+    <div class="col-md-4">
+      <img src="Midias/MyPhoto_LightMode.png" class="img-fluid rounded" alt="Minha Foto">
+    </div>
+    <!-- Coluna do texto -->
+    <div class="col-md-8">
+      <h1>Bem vindo ao meu site</h1>
+      <p>Este site foi feito com muito carinho para demonstrar como o Bootstrap pode facilitar sua vida!</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. SESSÃO CENTRALIZADA COM 3 PARÁGRAFOS -->
+<section class="container text-center my-5">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+  <p>Aenean lacinia bibendum nulla sed consectetur.</p>
+</section>
+
+<!-- 4. SESSÃO DE CARDS COM FILTRO -->
+<section class="container my-5">
+  <!-- Botões de filtro -->
+  <div class="mb-4 text-center">
+    <button class="btn btn-primary filter-btn" data-filter="tipo1">Tipo 1</button>
+    <button class="btn btn-secondary filter-btn" data-filter="tipo2">Tipo 2</button>
+    <button class="btn btn-success filter-btn" data-filter="tipo3">Tipo 3</button>
+    <button class="btn btn-dark filter-btn" data-filter="all">Todos</button>
+  </div>
+
+  <!-- Cards -->
+  <div class="row" id="cardContainer">
+    <div class="col-md-4 mb-4 card-item tipo1">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card Tipo 1</h5>
+          <p class="card-text">Conteúdo do tipo 1.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4 card-item tipo2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card Tipo 2</h5>
+          <p class="card-text">Conteúdo do tipo 2.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4 card-item tipo3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card Tipo 3</h5>
+          <p class="card-text">Conteúdo do tipo 3.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS e filtro -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".card-item");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const type = btn.getAttribute("data-filter");
+      cards.forEach(card => {
+        card.style.display = (type === "all" || card.classList.contains(type)) ? "block" : "none";
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
