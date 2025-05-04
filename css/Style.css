@@ -1,393 +1,283 @@
-/*Mini reset de formatações*/
-*{
+/* Configurações padrão do site */
+* {
     font-size: 100%;
     font-style: normal;
     text-decoration: none;
     margin: 0;
     padding: 0;
 }
-
-/*Variáveis para cor/img*/
-.defaultMode:root{
-    /*Cores de texto*/
-    --fill-logo-color: #fff;
-    --title-color: #00f891;
-    --simpletext-color: #fff;
-    --link-color: #00f891;
-    --link-hover-color: #fff;
-    --text-dropdown-color: #000;
-    /*Cores e imagem de fundo*/
-    --bg-dropdown-color: #00201f;
-    --bg-dropdown-hover-color: #fff;
-    --bg-scrollbar-color: #001a19;
-    --bg-scrollbar-thumb-color: #002f2d;
-    --bg-gradient: linear-gradient(to right,#0d0d0d,#00201f,#01403e);
-    --my-photo: url("../Midias/MyPhoto_DarkMode.png");
-    /*Cores dos botões*/
-    --bg-cards: #000;
-    --bg-button: #005f5c;
-    --bg-button-hover: #0080ff;
-    --text-button: #fff;
-    --nav-itens-hover: #3e80fb;
-    /*Decorações*/
-    --neon-title: #ffffff 1px 1px 20px;
-    --text-underline: none;
-    /*Cores do alerta de projeto em andamento*/
-    --bg-work-in-progress-color: #f00;
-    --text-work-in-progress-color: #fff;
-}
-.lightMode:root{
-    /*Cores de texto*/
-    --fill-logo-color: #0068d0;
-    --title-color: #0080ff;
-    --simpletext-color: #01403e;
-    --link-color: #00f891;
-    --link-hover-color: #004e2d;
-    --text-dropdown-color: #000;
-    /*Cores e imagem de fundo*/
-    --bg-dropdown-color: #010020;
-    --bg-dropdown-hover-color: #fff;
-    --bg-scrollbar-color: #010020;
-    --bg-scrollbar-thumb-color: #03004e;
-    --bg-gradient: linear-gradient(to right,#bbb,#e6e6e6,#fff);
-    --my-photo: url("../Midias/MyPhoto_LightMode.png");
-    /*Cores dos botões*/
-    --bg-cards: #fff;
-    --bg-button: #005f5c;
-    --bg-button-hover: #0080ff;
-    --text-button: #fff;
-    --nav-itens-hover: #00f891;
-    /*Decorações*/
-    --neon-title: #00446c 1px 1px 5px;
-    --text-underline: none;
-    /*Cores do alerta de projeto em andamento*/
-    --bg-work-in-progress-color: #dc0101;
-    --text-work-in-progress-color: #fff;
-}
-.colorBlindMode:root{
-    /*Cores de texto*/
-    --fill-logo-color: #000;
-    --title-color: #000;
-    --simpletext-color: #000;
-    --link-color: #0000fb;
-    --link-hover-color: #040082;
-    --text-dropdown-color: #000;
-    /*Cores e imagem de fundo*/
-    --bg-dropdown-color: #bbb;
-    --bg-dropdown-hover-color: #fff;
-    --bg-scrollbar-color: #010020;
-    --bg-scrollbar-thumb-color: #03004e;
-    --bg-gradient: linear-gradient(to right,#fff, #fff);
-    --my-photo: url("../Midias/MyPhoto_ColorBlindMode.png");
-    /*Cores dos botões*/
-    --bg-cards: #fff;
-    --bg-button: #002d2b;
-    --bg-button-hover: #000;
-    --text-button: #fff;
-    --nav-itens-hover: #00f891;
-    /*Decorações*/
-    --neon-title: none;
-    --text-underline: underline;
-    /*Cores do alerta de projeto em andamento*/
-    --bg-work-in-progress-color: #000;
-    --text-work-in-progress-color: #fff;
+.hide {
+    display: none !important;
 }
 
-/*Configurações do site*/
-body{
-    background-image: var(--bg-gradient);
-    color: var(--simpletext-color);
-    letter-spacing: 0.10rem;
-    font-family: Arial, Helvetica, sans-serif;
+/* Estilo do background do site*/
+#backgroundVideo{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translate(10%,5%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -999;
 }
-::-webkit-scrollbar{
-    width: 10px;
-    background-color: var(--bg-scrollbar-color);
-}
-::-webkit-scrollbar-thumb{
-    background-color: var(--bg-scrollbar-thumb-color);
-}
-/*Cabeçalho*/
-nav{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+#glassEffect{
     position: fixed;
     top: 0;
+    left: 0;
+    z-index: -99;
+    background-color: rgba(35, 35, 35, 0.633);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 100%;
-    background-image: var(--bg-gradient);
-}
-#navContent{
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 0 1%;
-    margin: 0 2%;
-    align-items: center;
-    justify-content: center;
-}
-#navContent p{
-    margin: 0;
-    font-size: 1.4rem;
-    color: var(--fill-logo-color);
-    font-weight: bold;
-}
-#navContent svg{
-    width: 4rem;
-    height: 4rem;
-    fill: var(--fill-logo-color)
-}
-#navContent svg:hover{
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 10px var(--nav-itens-hover));
-}
-#siteControls{
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0 2%;
-}
-#dropdownColorMode .dropdown-toggle{
-    font-size: 3rem;
-    color: var(--fill-logo-color);
-    background: none;
-    border: none;
-}
-#dropdownColorMode .dropdown-toggle::after{
-    display: none;
-}
-#dropdownColorMode .dropdown-menu{
-    background-color: var(--bg-dropdown-color);
-}
-#dropdownColorMode .dropdown-item, #dropdownColorMode .dropdown-item:visited{
-    color: var(--title-color);
-}
-#dropdownColorMode .dropdown-item:hover{
-    color: var(--text-dropdown-color);
-    background-color: var(--bg-dropdown-hover-color);
+    height: 100%;
 }
 
-/*Texto de boas vindas*/
-#introduction{
-    margin: 5rem 0 2% 0;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center; 
+/* Estilo da navbar */
+#navBar {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.853);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
-#introduction article{
-    width: 70%;
+#navBar p {
+    font-size: 1.1rem;
 }
-#introduction h1{
-    color: var(--title-color);
-    text-shadow: var(--neon-title);
-    text-decoration: var(--text-underline);
-    font-size: 2.3rem;
+#navBar svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: ease-in-out 0.3s;
 }
-#introduction p{
-    text-shadow: var(--neon-title);
-    text-decoration: var(--text-underline);
-    font-size: 1.6rem;
+#navBar svg:hover {
+    filter: drop-shadow(0 0 10px #fff);
 }
-#myPhoto{
-    float: left;
-    background: var(--my-photo) no-repeat;
+.ghIcon, .lnIcon, .mlIcon, .igIcon, .ytIcon {
+    fill: #898989;
+}
+.ghIcon:hover {
+    fill: #ffffff;
+}
+.lnIcon:hover {
+    fill: #00ffd5;
+}
+.mlIcon:hover {
+    fill: #ff3030;
+}
+.igIcon:hover {
+    fill: #ff00ae;
+}
+.ytIcon:hover {
+    fill: #ff0000;
+}
+#navBar button svg {
+    fill: #9b9b9b;
+}
+#navBar button svg:hover {
+    fill: #ffffff;
+}
+
+/* Estilo para todas as sessões*/
+section {
+    margin: 5%;
+    color: #fff;
+}
+section h2 {
+    font-size: 1.9rem;
+    color: #ff9500;
+    font-weight: bolder;
+    text-shadow: #fccd4c 1px 1px 20px;
+}
+
+/* Estilo da sessão introdutória*/
+#myPhoto {
+    background: url("../Midias/MyPhoto_ColorBlindMode.png") no-repeat;
     background-size: cover;
     width: 15rem;
     height: 15rem;
-    margin-right: 1%;
+}
+#introduction h1 {
+    color: #ff9500;
+    text-shadow: #ffdf86 1px 1px 20px;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+#introduction p {
+    color: #fff;
+    text-shadow: #ffffff 1px 1px 20px;
+    font-size: 1.5rem;
+}
+#introduction span {
+    color: #ff9500;
+    font-weight: bolder;
+    text-shadow: #fccd4c 1px 1px 20px;
 }
 
-/*Sobre mim*/
-#aboutMe{
-    margin: 2% 5%;
-    text-align: left;
-}
-#aboutMe h2{
-    text-align: center;
-    color: var(--title-color);
-    text-shadow: var(--neon-title);
-    text-decoration: var(--text-underline);
-    font-size: 2rem;
-    margin: 0 0 2.5% 0;
-}
+/* Estilo da sessão sobre mim */
 #aboutMe p{
-    margin: 0.7% 0;
     font-size: 1.2rem;
-}
-#aboutMe a, #aboutMe a:visited{
-    color: var(--link-color);
-    text-decoration: var(--text-underline);
-}
-#aboutMe a:hover{
-    color: var(--link-hover-color);
-    text-decoration: var(--text-underline);
-    text-shadow: var(--neon-title);
 }
 
-/*Cards de projetos*/
-#projects{
-    margin: 4% 5%;
+/* Estilo da sessão com as minhas habilidades */
+#techDescriptionContainer {
+    background-color: #ffffff;
+    border-radius: 9px;
+    grid-template-columns: repeat(5, 1fr);
+    border: #ff9500 5px double;
 }
-#projects h2{
-    text-align: center;
-    color: var(--title-color);
-    text-shadow: var(--neon-title);
-    text-decoration: var(--text-underline);
-    font-size: 2rem;
-    margin: 2.5% 0;
-}
-#projectsContainer{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-.cardProject{
-    margin: 2%;
-    width: 35rem;
-    height: fit-content;
-    background-color: var(--bg-cards);
-    align-items: center;
-    border: var(--bg-button-hover) 5px double;
-    border-radius: 30px;
-    overflow: hidden;
-    text-align: center;
-    justify-content: center;
-}
-.cardProject img{
-    width: 100%;
-    margin-bottom: 1%;
-}
-.line{
-    width: 90%;
-    height: 2.5px;
-    background-color: var(--bg-button-hover);
-    margin: 2% auto;
-    border-radius: 10px;
-}
-.cardProject h3{
-    margin: 2% 0 3% 0;
-    color: var(--title-color);
-    text-shadow: var(--neon-title);
-    text-decoration: var(--text-underline);
-    font-size: 1.6rem;
-}
-.cardProject p :not(.platformContainer p){
-    font-size: 1.3rem;
-    margin-bottom: 5%;
-}
-.platformContainer{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3%;
-    height: 10%;
-}
-.platformContainer p{
-    font-size: 1.2rem;
-    margin: 0;
-}
-.platformContainer svg{
+.techIcon {
     width: 3rem;
-    height: 3rem;
-    fill: var(--fill-logo-color);
-}
-.buttonContainer{
-    height: 9%;
-    margin: 3% 0;
-    gap: 5%;
-    display: flex;
-    justify-content: center;
-    flex-flow: row nowrap;
-    text-align: center;
-}
-.cardProject a, .cardProject a:visited{
-    color: var(--text-button);
-    padding: 2% 10%;
-    background-color: var(--bg-button);
-    border-radius: 10px;
-    text-decoration: none;
-}
-.cardProject a:hover{
-    background-color: var(--bg-button-hover);
-    text-shadow: var(--neon-title);
-    text-decoration: var(--text-underline);
-}
-.workInProgress{
-    color: var(--text-work-in-progress-color);
-    background-color: var(--bg-work-in-progress-color);
-    padding: 2% 10%;
+    margin: 0 auto;
+    filter: saturate(2);
+    width: 50%;
     border-radius: 10px;
 }
 
-/*Rodapé*/
-footer p{
-    text-align: center;
-    color: var(--title-color);
-    text-shadow: var(--neon-title);
-    font-size: 1.4rem;
-    margin: 1.5% 0;
+/* Estilo da sessão dos meus projetos*/
+#projects button {
+    background-color: #ff9500;
+    border: #ff9500 2px solid;
+    font-weight: bolder;
+    transition: all 0.2s;
+}
+#projects button:hover {
+    background: none;
+    color: #ff9500;
+}
+#filterDescription {
+    font-size: 1.2rem;
 }
 
-/*Responsividade*/
-/*Tamanho para arrumar a navbar*/
-
-@media (max-width:800px){
-    #introduction h1{
-        font-size: 2rem;
-    }
-    #myPhoto{
-        width: 12rem;
-        height: 12rem;
-    }
+/* Estilo dos cards dos projetos */
+.card {
+    color: #fff;
+    background-color: #00000086;
+    border: #ff9500 5px double;
 }
-@media (max-width: 735px){
-    *{
+.card svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+}
+.card h5 {
+    color: #ff9500;
+}
+.card-text {
+    font-size: 1.1rem;
+}
+.github-link {
+    border: #754600 3px solid;
+    background-color: #754600;
+    color: #fff;
+    font-weight: bolder;
+    transition: all 0.2s;
+}
+.github-link:hover {
+    background: none;
+    color: #ff9900;
+    border: #ff9900 3px solid;
+}
+.site-link {
+    border: #b78600 3px solid;
+    background-color: #b78600;
+    color: #fff;
+    font-weight: bolder;
+    transition: all 0.2s;
+}
+.site-link:hover {
+    color: #ffbb00;
+    border: #ffbb00 3px solid;
+    background: none;
+}
+.usedTech{
+    font-size: 0.8rem;
+    color: #000;
+    background-color: #ff9500;
+    padding: 1% 2%;
+    border-radius: 5px;
+}
+
+/* Estilo do rodapé*/
+footer {
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.853);
+}
+
+@media(max-width: 768px){
+    /* Responsividade do vídeo de fundo */
+    #backgroundVideo{
+        transform: scale(1.3);
+        transform: translate(35%, 20%);
+    }
+    /* Responsividade das sessões e títulos de sessões */
+    section {
+        margin: 15% auto;
+    }
+    section h2 {
+        font-size: 1.4rem;
+    }
+    /* Responsividade da navbar */
+    #navBar p {
         font-size: 0.9rem;
     }
-    #myPhoto{
-        width: 11rem;
-        height: 11rem;
+    #navBar svg {
+        width: 1.5rem;
+        height: 1.5rem;
     }
-    #introduction h1{
-        font-size: 1.9rem;
+    .ghIcon {
+        fill: #ffffff;
     }
-    #aboutMe h2{
-        font-size: 1.8rem;
+    .lnIcon {
+        fill: #00ffd5;
     }
-    #projects h2{
-        font-size: 1.8rem;
+    .mlIcon {
+        fill: #ff3030;
     }
-    .cardProject{
-        width: 30rem;
-        height: 30rem;
+    .igIcon {
+        fill: #ff00ae;
     }
-}
-@media (max-width: 500px){
-    *{
-        font-size: 0.8rem;
+    .ytIcon {
+        fill: #ff0000;
     }
-    #navContent{
-        margin: 0 4%;
+    /* Responsividade da sessão introdutória*/
+    #myPhoto {
+        width: 10rem;
+        height: 10rem;
     }
-    #introduction h1{
-        font-size: 1.5rem;
+    #introduction h1 { 
+        font-size: 1.6rem;
     }
-    #introduction p{
-        font-size: 1.3rem;
-    }
-    #myPhoto{
-        width: 9rem;
-        height: 9rem;
-    }
-    #aboutMe p{
-        margin: 2% 0;
-        line-height: 1.5rem;
-    }
-    .cardProject p:not(.platformContainer>p){
-        font-size: 1.1rem;
-    }
-    .cardProject a, .cardProject a:visited{
+    #introduction p { 
         font-size: 1.2rem;
+    }
+
+    /* Responsividade da sessão sobre mim */
+    #aboutMe p{
+        font-size: 0.9rem;
+        margin-bottom: 5%;
+    }
+    /* Responsividade da sessão de habilidades*/
+    .techIcon {
+        width: 1.8rem;
+    }
+    /* Responsividade da sessão de projetos */
+    #filterDescription {
+        font-size: 1rem;
+    }
+    .card p:not(.usedTech) {
+        font-size: 0.9rem;
+    }
+    .card svg {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .github-link, .site-link {
+        font-size: 1rem;
+    }
+    .usedTech{
+        font-size: 0.7rem;
+    }
+    /* Responsividade do rodapé*/
+    footer {
+        font-size: 0.8rem;
     }
 }

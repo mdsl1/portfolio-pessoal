@@ -1,0 +1,121 @@
+[
+    {
+        "title": "Portfólio Pessoal",
+        "data-filter": "frontend",
+        "img": "Midias/Projetos/Portfolio_Pessoal.png",
+        "descricao": "Este site que você está vendo.",
+        "adaptado_para":
+        {
+            "celular": true,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/mdsl1/portfolio-pessoal",
+            "site": "n/a"
+        },
+        "technologies":
+        {   
+            "0": "HTML",
+            "1": "CSS",
+            "2": "Javascript",
+            "3": "Bootstrap",
+            "4": "JSON"
+        }
+    }
+    ,
+    {
+        "title": "Inscryption Memory",
+        "data-filter": "frontend",
+        "img": "Midias/Projetos/Inscryption_Memory.png",
+        "descricao": "Jogo da memória baseado no jogo 'Inscryption'.",
+        "adaptado_para":
+        {
+            "celular": false,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/mdsl1/portfolio-pessoal",
+            "site": "https://mdsl1.github.io/inscryption-memory/"
+        },
+        "technologies":
+        {   
+            "0": "HTML",
+            "1": "CSS",
+            "2": "Javascript"
+        }
+    }
+    ,
+    {
+        "title": "Dociê Bolos e Doces",
+        "data-filter": "frontend",
+        "img": "Midias/Projetos/Docie_WebSite.png",
+        "descricao": "Website no estilo E-Commerce de uma loja de bolos e doces.",
+        "adaptado_para":
+        {
+            "celular": false,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/mdsl1/docie-bolos-e-doces",
+            "site": "https://mdsl1.github.io/docie-bolos-e-doces/"
+        },
+        "technologies":
+        {   
+            "0": "HTML",
+            "1": "CSS",
+            "2": "Javascript",
+            "3": "Bootstrap",
+            "4": "JSON"
+        }
+    }
+    ,
+    {
+        "title": "Calculadora Científica",
+        "data-filter": "frontend",
+        "img": "Midias/Projetos/WorkInProgress.png",
+        "descricao": "Calculadora científica que mostra as etapas de cálculo.",
+        "adaptado_para":
+        {
+            "celular": false,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/mdsl1/calculadora-cientifica",
+            "site": "n/a"
+        },
+        "technologies":
+        {   
+            "0": "HTML",
+            "1": "CSS",
+            "2": "Javascript"
+        }
+    }
+    ,
+    {
+        "title": "Automação de Registro",
+        "data-filter": "automacao",
+        "img": "Midias/Projetos/WorkInProgress.png",
+        "descricao": "Projeto criado por mim para automatizar o preenchimento dos formulários da empresa onde estagio.",
+        "adaptado_para":
+        {
+            "celular": false,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/mdsl1/Python_Projects/tree/main/Automacao_Registro_Incidentes",
+            "site": "n/a"
+        },
+        "technologies":
+        {   
+            "0": "Python",
+            "1": "Pyautogui",
+            "2": "JSON",
+            "3": "TkInter"
+        }
+    }
+]

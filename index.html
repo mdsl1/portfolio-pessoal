@@ -1,149 +1,177 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="defaultMode">
-    <head>
-        <title>Portfolio pessoal</title>
-        <meta charset="utf-8">
-        <meta name="author" content="mdsl1">
-        <meta name="description" content="My personal development Portfolio.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--Links de arquivos externos para configuração da página-->
-        <link rel="icon" type="image/x-icon" href="Midias/Favicon.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/Style.css">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div id="navContent">
-                    <p>mdsl1</p>
-                    <!--GitHub-->
-                    <a href="https://github.com/mdsl1" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-74.4 -120.90175 644.8 725.4105"><path d="M165.9 389.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2 .6-2-1.3-4.3-4.3-5.2-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 0C106.1 0 0 105.3 0 244c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5 21.3 0 42.8 2.9 62.8 8.5 0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 449.8 496 354.9 496 244 496 105.3 383.5 0 244.8 0zM97.2 344.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
-                    <!--LinkedIn-->
-                    <a href="https://www.linkedin.com/in/marcos-daniel-da-silva-lima-091b11260/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.493675 -16.3118 99.61185 97.8708"><path d="M72.865 61.1094a1.2 1.2 0 001.21-1.269c0-.9-.543-1.33-1.657-1.33h-1.8v4.712h.677v-2.054h.832l.019.025 1.291 2.029h.724l-1.389-2.1zm-.783-.472h-.785v-1.593h.995c.514 0 1.1.084 1.1.757 0 .774-.593.836-1.314.836m-16.873-5.433h-9.6v-15.034c0-3.585-.064-8.2-4.993-8.2-5 0-5.765 3.906-5.765 7.939v15.294h-9.6v-30.916h9.216v4.225h.129a10.1 10.1 0 019.093-4.994c9.73 0 11.524 6.4 11.524 14.726zm-40.79-35.143a5.571 5.571 0 115.57-5.572 5.571 5.571 0 01-5.57 5.572m4.8 35.143h-9.61v-30.917h9.61zm40.776-55.2H4.781A4.728 4.728 0 000 4.6744v55.439a4.731 4.731 0 004.781 4.675h55.21a4.741 4.741 0 004.8-4.675V4.6704a4.738 4.738 0 00-4.8-4.67"/><path d="M72.164 56.4114a4.418 4.418 0 10.085 0h-.085m0 8.33a3.874 3.874 0 113.809-3.938v.065a3.791 3.791 0 01-3.708 3.871h-.1"/></svg></a>
-                    <!--Gmail-->
-                    <a href="mailto:marcos.d.s.lima1408@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-13.2 -16.50405 114.4 99.0243"><path  d="M6 66.0162h14v-34l-20-15v43c0 3.315 2.685 6 6 6z"/><path d="M68 66.0162h14c3.315 0 6-2.685 6-6v-43l-20 15z"/><path d="M68 6.0162v26l20-15v-8c0-7.415-8.465-11.65-14.4-7.2z"/><path d="M20 32.0162v-26l24 18 24-18v26l-24 18z"/><path d="M0 9.0162v8l20 15v-26l-5.6-4.2c-5.935-4.45-14.4-.215-14.4 7.2z"/></svg></a>
-                    <!--Instagram-->
-                    <a href="https://www.instagram.com/mdsl.01/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-100.7682 -167.947 873.3244 1007.682"><path d="M335.895 0c-91.224 0-102.663.387-138.49 2.021-35.752 1.631-60.169 7.31-81.535 15.612-22.088 8.584-40.82 20.07-59.493 38.743-18.674 18.673-30.16 37.407-38.743 59.495C9.33 137.236 3.653 161.653 2.02 197.405.386 233.232 0 244.671 0 335.895c0 91.222.386 102.661 2.02 138.488 1.633 35.752 7.31 60.169 15.614 81.534 8.584 22.088 20.07 40.82 38.743 59.495 18.674 18.673 37.405 30.159 59.493 38.743 21.366 8.302 45.783 13.98 81.535 15.612 35.827 1.634 47.266 2.021 138.49 2.021 91.222 0 102.661-.387 138.488-2.021 35.752-1.631 60.169-7.31 81.534-15.612 22.088-8.584 40.82-20.07 59.495-38.743 18.673-18.675 30.159-37.407 38.743-59.495 8.302-21.365 13.981-45.782 15.612-81.534 1.634-35.827 2.021-47.266 2.021-138.488 0-91.224-.387-102.663-2.021-138.49-1.631-35.752-7.31-60.169-15.612-81.534-8.584-22.088-20.07-40.822-38.743-59.495-18.675-18.673-37.407-30.159-59.495-38.743-21.365-8.302-45.782-13.981-81.534-15.612C438.556.387 427.117 0 335.895 0zm0 60.521c89.686 0 100.31.343 135.729 1.959 32.75 1.493 50.535 6.965 62.37 11.565 15.68 6.094 26.869 13.372 38.622 25.126 11.755 11.754 19.033 22.944 25.127 38.622 4.6 11.836 10.072 29.622 11.565 62.371 1.616 35.419 1.959 46.043 1.959 135.73 0 89.687-.343 100.311-1.959 135.73-1.493 32.75-6.965 50.535-11.565 62.37-6.094 15.68-13.372 26.869-25.127 38.622-11.753 11.755-22.943 19.033-38.621 25.127-11.836 4.6-29.622 10.072-62.371 11.565-35.413 1.616-46.036 1.959-135.73 1.959-89.694 0-100.315-.343-135.73-1.96-32.75-1.492-50.535-6.964-62.37-11.564-15.68-6.094-26.869-13.372-38.622-25.127-11.754-11.753-19.033-22.943-25.127-38.621-4.6-11.836-10.071-29.622-11.565-62.371-1.616-35.419-1.959-46.043-1.959-135.73 0-89.687.343-100.311 1.959-135.73 1.494-32.75 6.965-50.535 11.565-62.37 6.094-15.68 13.373-26.869 25.126-38.622 11.754-11.755 22.944-19.033 38.622-25.127 11.836-4.6 29.622-10.072 62.371-11.565 35.419-1.616 46.043-1.959 135.73-1.959"/><path d="M335.895 447.859c-61.838 0-111.966-50.128-111.966-111.964 0-61.838 50.128-111.966 111.966-111.966 61.836 0 111.964 50.128 111.964 111.966 0 61.836-50.128 111.964-111.964 111.964zm0-284.451c-95.263 0-172.487 77.224-172.487 172.487 0 95.261 77.224 172.485 172.487 172.485 95.261 0 172.485-77.224 172.485-172.485 0-95.263-77.224-172.487-172.485-172.487m219.608-6.815c0 22.262-18.047 40.307-40.308 40.307-22.26 0-40.307-18.045-40.307-40.307 0-22.261 18.047-40.308 40.307-40.308 22.261 0 40.308 18.047 40.308 40.308"/></svg></a>
-                    <!--Youtube-->
-                    <a href="https://www.youtube.com/@Mdsl-1" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-35.20005 -41.33325 305.0671 247.9995"><path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849"></svg></a>
-                </div>           
-                <div id="siteControls">
-                    <!--div id="flagLanguage"></div-->
-                    <div class="dropdown" id="dropdownColorMode">
-                        <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">⚙</button>
-                        <ul class="dropdown-menu">
-                            <li><button onclick="defaultMode()" class="dropdown-item" href="#">Modo Padrão</button></li>
-                            <li><button onclick="lightMode()" class="dropdown-item" href="#">Modo Claro</button></li>
-                            <li><button onclick="colorBlindMode()" class="dropdown-item" href="#">Modo Daltônico</button></li>
-                        </ul>
-                    </div>
-                    <!--Futuramente irei adicionar 2 idiomas(Portugues e ingles)-->
-                    <!--div class="dropdown" id="dropdownLanguage">
-                        <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">⚙</button>
-                        <ul class="dropdown-menu">
-                            <li><button onclick="Pt_BR()" class="dropdown-item" href="#">Pt-BR</button></li>
-                            <li><button onclick="En_US()" class="dropdown-item" href="#">En-US</button></li>
-                        </ul>
-                    </div-->
-                </div>
-            </nav>
-            <div id="introduction">
-                <div id="myPhoto"></div>
-                <article>
-                    <h1>Bem vindo(a), sou o Marcos Daniel da Silva Lima</h1>
-                    <p>Desenvolvedor Full-Stack</p>
-                </article>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfólio Pessoal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <!-- Navbar com os links de redes sociais e menu de configuração -->
+    <nav id="navBar" class="navbar py-1 px-2 px-md-3 py-md-2 sticky-top">
+      <div class="container-fluid px-0 w-100">
+        <div class="row w-100 align-items-center px-0">
+
+          <!-- Parte da esquerda, com os links de redes sociais -->
+          <div class="col-9 d-flex gap-1 gap-md-4 align-items-center">
+            <p class="m-0">m.d.s.l.1.</p>
+            <!--GitHub-->
+            <a class="ghIcon" href="https://github.com/mdsl1" target="_blank"><svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" viewBox="-74.4 -120.90175 644.8 725.4105"><path d="M165.9 389.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2 .6-2-1.3-4.3-4.3-5.2-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 0C106.1 0 0 105.3 0 244c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5 21.3 0 42.8 2.9 62.8 8.5 0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 449.8 496 354.9 496 244 496 105.3 383.5 0 244.8 0zM97.2 344.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+            <!--LinkedIn-->
+            <a class="lnIcon" href="https://www.linkedin.com/in/marcos-daniel-da-silva-lima-091b11260/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.493675 -16.3118 99.61185 97.8708"><path d="M72.865 61.1094a1.2 1.2 0 001.21-1.269c0-.9-.543-1.33-1.657-1.33h-1.8v4.712h.677v-2.054h.832l.019.025 1.291 2.029h.724l-1.389-2.1zm-.783-.472h-.785v-1.593h.995c.514 0 1.1.084 1.1.757 0 .774-.593.836-1.314.836m-16.873-5.433h-9.6v-15.034c0-3.585-.064-8.2-4.993-8.2-5 0-5.765 3.906-5.765 7.939v15.294h-9.6v-30.916h9.216v4.225h.129a10.1 10.1 0 019.093-4.994c9.73 0 11.524 6.4 11.524 14.726zm-40.79-35.143a5.571 5.571 0 115.57-5.572 5.571 5.571 0 01-5.57 5.572m4.8 35.143h-9.61v-30.917h9.61zm40.776-55.2H4.781A4.728 4.728 0 000 4.6744v55.439a4.731 4.731 0 004.781 4.675h55.21a4.741 4.741 0 004.8-4.675V4.6704a4.738 4.738 0 00-4.8-4.67"/><path d="M72.164 56.4114a4.418 4.418 0 10.085 0h-.085m0 8.33a3.874 3.874 0 113.809-3.938v.065a3.791 3.791 0 01-3.708 3.871h-.1"/></svg></a>
+            <!--Gmail-->
+            <a class="mlIcon" href="mailto:marcos.d.s.lima1408@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-13.2 -16.50405 114.4 99.0243"><path  d="M6 66.0162h14v-34l-20-15v43c0 3.315 2.685 6 6 6z"/><path d="M68 66.0162h14c3.315 0 6-2.685 6-6v-43l-20 15z"/><path d="M68 6.0162v26l20-15v-8c0-7.415-8.465-11.65-14.4-7.2z"/><path d="M20 32.0162v-26l24 18 24-18v26l-24 18z"/><path d="M0 9.0162v8l20 15v-26l-5.6-4.2c-5.935-4.45-14.4-.215-14.4 7.2z"/></svg></a>
+            <!--Instagram-->
+            <a class="igIcon" href="https://www.instagram.com/mdsl.01/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-100.7682 -167.947 873.3244 1007.682"><path d="M335.895 0c-91.224 0-102.663.387-138.49 2.021-35.752 1.631-60.169 7.31-81.535 15.612-22.088 8.584-40.82 20.07-59.493 38.743-18.674 18.673-30.16 37.407-38.743 59.495C9.33 137.236 3.653 161.653 2.02 197.405.386 233.232 0 244.671 0 335.895c0 91.222.386 102.661 2.02 138.488 1.633 35.752 7.31 60.169 15.614 81.534 8.584 22.088 20.07 40.82 38.743 59.495 18.674 18.673 37.405 30.159 59.493 38.743 21.366 8.302 45.783 13.98 81.535 15.612 35.827 1.634 47.266 2.021 138.49 2.021 91.222 0 102.661-.387 138.488-2.021 35.752-1.631 60.169-7.31 81.534-15.612 22.088-8.584 40.82-20.07 59.495-38.743 18.673-18.675 30.159-37.407 38.743-59.495 8.302-21.365 13.981-45.782 15.612-81.534 1.634-35.827 2.021-47.266 2.021-138.488 0-91.224-.387-102.663-2.021-138.49-1.631-35.752-7.31-60.169-15.612-81.534-8.584-22.088-20.07-40.822-38.743-59.495-18.675-18.673-37.407-30.159-59.495-38.743-21.365-8.302-45.782-13.981-81.534-15.612C438.556.387 427.117 0 335.895 0zm0 60.521c89.686 0 100.31.343 135.729 1.959 32.75 1.493 50.535 6.965 62.37 11.565 15.68 6.094 26.869 13.372 38.622 25.126 11.755 11.754 19.033 22.944 25.127 38.622 4.6 11.836 10.072 29.622 11.565 62.371 1.616 35.419 1.959 46.043 1.959 135.73 0 89.687-.343 100.311-1.959 135.73-1.493 32.75-6.965 50.535-11.565 62.37-6.094 15.68-13.372 26.869-25.127 38.622-11.753 11.755-22.943 19.033-38.621 25.127-11.836 4.6-29.622 10.072-62.371 11.565-35.413 1.616-46.036 1.959-135.73 1.959-89.694 0-100.315-.343-135.73-1.96-32.75-1.492-50.535-6.964-62.37-11.564-15.68-6.094-26.869-13.372-38.622-25.127-11.754-11.753-19.033-22.943-25.127-38.621-4.6-11.836-10.071-29.622-11.565-62.371-1.616-35.419-1.959-46.043-1.959-135.73 0-89.687.343-100.311 1.959-135.73 1.494-32.75 6.965-50.535 11.565-62.37 6.094-15.68 13.373-26.869 25.126-38.622 11.754-11.755 22.944-19.033 38.622-25.127 11.836-4.6 29.622-10.072 62.371-11.565 35.419-1.616 46.043-1.959 135.73-1.959"/><path d="M335.895 447.859c-61.838 0-111.966-50.128-111.966-111.964 0-61.838 50.128-111.966 111.966-111.966 61.836 0 111.964 50.128 111.964 111.966 0 61.836-50.128 111.964-111.964 111.964zm0-284.451c-95.263 0-172.487 77.224-172.487 172.487 0 95.261 77.224 172.485 172.487 172.485 95.261 0 172.485-77.224 172.485-172.485 0-95.263-77.224-172.487-172.485-172.487m219.608-6.815c0 22.262-18.047 40.307-40.308 40.307-22.26 0-40.307-18.045-40.307-40.307 0-22.261 18.047-40.308 40.307-40.308 22.261 0 40.308 18.047 40.308 40.308"/></svg></a>
+            <!--Youtube-->
+            <a class="ytIcon" href="https://www.youtube.com/@Mdsl-1" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-35.20005 -41.33325 305.0671 247.9995"><path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849"></svg></a>
+          </div>
+
+          <!-- Parte da direita, com o menu de configuração -->
+          <div class="col-3 d-flex justify-content-end px-0">
+            
+            <!-- Dropdown com a escolha de temas -->
+            <div class="btn-group dropstart">
+              <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_config</title><path d="M23.265,24.381l.9-.894c4.164.136,4.228-.01,4.411-.438l1.144-2.785L29.805,20l-.093-.231c-.049-.122-.2-.486-2.8-2.965V15.5c3-2.89,2.936-3.038,2.765-3.461L28.538,9.225c-.171-.422-.236-.587-4.37-.474l-.9-.93a20.166,20.166,0,0,0-.141-4.106l-.116-.263-2.974-1.3c-.438-.2-.592-.272-3.4,2.786l-1.262-.019c-2.891-3.086-3.028-3.03-3.461-2.855L9.149,3.182c-.433.175-.586.237-.418,4.437l-.893.89c-4.162-.136-4.226.012-4.407.438L2.285,11.733,2.195,12l.094.232c.049.12.194.48,2.8,2.962l0,1.3c-3,2.89-2.935,3.038-2.763,3.462l1.138,2.817c.174.431.236.584,4.369.476l.9.935a20.243,20.243,0,0,0,.137,4.1l.116.265,2.993,1.308c.435.182.586.247,3.386-2.8l1.262.016c2.895,3.09,3.043,3.03,3.466,2.859l2.759-1.115C23.288,28.644,23.44,28.583,23.265,24.381ZM11.407,17.857a4.957,4.957,0,1,1,6.488,2.824A5.014,5.014,0,0,1,11.407,17.857Z"></path></g></svg>
+              </button>
+              <div class="dropdown-menu">
+                <button onclick="defaultMode()" class="dropdown-item" href="#">Modo Padrão</button>
+                <button onclick="lightMode()" class="dropdown-item" href="#">Modo Claro</button>
+                <button onclick="colorBlindMode()" class="dropdown-item" href="#">Modo Daltônico</button>
+              </div>
             </div>
-        </header>
-        <main>
-            <section id="aboutMe">
-                <h2>Sobre Mim</h2>
-                <p>Sou um desenvolvedor de 21 anos, atualmente cursando o 2º semestre de Desenvolvimento de Software Multiplataforma na Fatec. Meu interesse começou com a criação de jogos no Scratch e evoluiu para projetos mais complexos em Python, C e front-end (HTML, CSS e JavaScript).</p>
-                <p>Além disso, tenho interesse em automações com Inteligência Artificial e busco constantemente ampliar meu conhecimento por meio de projetos práticos.</p>
-                <p>Compartilho meus projetos em um canal no YouTube e mantenho um Instagram onde posto alguns projetos de designer, além de servir como meio de contato.</p>
-            </section>
-            <section id="projects">
-                <h2>Meus Projetos</h2>
-                <div id="projectsContainer">
-                    <!--Card Portfolio FrontEnd-->
-                    <div class="cardProject">
-                        <img src="Midias/Portfolio_FrontEnd.png" alt="Imagem do meu Portfolio Front-End">
-                        <div class="line"></div>
-                        <h3>Portfolio Dev Front-End</h3>
-                        <p> Este site que você está vendo.</p>
-                        <div class="platformContainer">
-                            <p>Adaptado para:</p> 
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.01 60.01" xml:space="preserve"><g><path d="M40.224,0H19.785c-3.584,0-6.5,2.893-6.5,6.449v47.113c0,3.554,2.916,6.448,6.5,6.448h20.438c3.584,0,6.501-2.894,6.501-6.448V6.449C46.725,2.893,43.808,0,40.224,0z M44.576,53.562c0,2.37-1.952,4.299-4.352,4.299H19.785c-2.399,0-4.351-1.929-4.351-4.299V6.449h0.001c0-2.371,1.952-4.299,4.351-4.299h20.438c2.399,0,4.352,1.928,4.352,4.299C44.577,6.449,44.577,53.562,44.576,53.562z M42.366,6.315h-24.72c-0.297,0-0.537,0.24-0.537,0.537v41.753c0,0.296,0.24,0.538,0.537,0.538h24.72c0.297,0,0.538-0.241,0.538-0.538V6.852C42.903,6.555,42.663,6.315,42.366,6.315zM41.829,48.067H18.182V7.389h23.646C41.828,7.389,41.828,48.067,41.829,48.067z M30.006,50.038c-1.811,0-3.285,1.473-3.285,3.284s1.474,3.284,3.285,3.284s3.283-1.474,3.283-3.284C33.289,51.511,31.817,50.038,30.006,50.038z M30.006,55.531c-1.219,0-2.21-0.991-2.21-2.209s0.991-2.21,2.21-2.21c1.218,0,2.209,0.992,2.209,2.21C32.215,54.54,31.224,55.531,30.006,55.531zM26.451,4.204c0-0.219,0.214-0.396,0.478-0.396h6.151c0.264,0,0.477,0.177,0.477,0.396S33.345,4.6,33.081,4.6H26.93C26.667,4.6,26.452,4.423,26.451,4.204z"/></g></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 270.729 270.729" xml:space="preserve"><g><path d="M0,55.529v124.822c0,14.763,12.1,26.771,26.974,26.771h78.03c-0.005,0.494-0.031,0.977,0.113,1.465c0.026,0.111,2.77,10.568-2.924,19.376c-0.58,0.903-0.769,1.911-0.764,2.919H80.626c-2.176,0-3.94,2.478-3.94,5.538c0,3.06,1.764,5.548,3.94,5.548h109.476c2.173,0,3.937-2.488,3.937-5.548c0-3.061-1.764-5.538-3.937-5.538h-19.896c0.005-1.008-0.179-2.016-0.766-2.919c-5.67-8.776-2.972-19.191-2.919-19.392c0.135-0.482,0.109-0.966,0.109-1.449h77.12c14.876,0,26.977-12.005,26.977-26.771V55.529c0-14.761-12.106-26.77-26.977-26.77H26.974C12.1,28.76,0,40.768,0,55.529zM158.758,230.872h-45.891c5.026-9.926,3.684-20.052,2.924-23.749h40.042C155.078,210.82,153.734,220.946,158.758,230.872zM259.557,55.529v124.822c0,8.609-7.092,15.602-15.815,15.602H26.974c-8.719,0-15.809-7.003-15.809-15.602V55.529c0-8.606,7.089-15.604,15.809-15.604h216.767C252.465,39.925,259.557,46.923,259.557,55.529z"/><path d="M25.717,54.072v106.18c0,1.602,1.289,2.893,2.888,2.893h213.503c1.597,0,2.893-1.291,2.893-2.893V54.072c0-1.596-1.296-2.887-2.893-2.887H28.61C27.012,51.186,25.717,52.481,25.717,54.072z M31.494,56.964h207.727v100.407H31.494V56.964z"/><path d="M138.626,172.578c-4.913,0-8.91,4-8.91,8.913s3.997,8.908,8.91,8.908c4.914,0,8.915-3.995,8.915-8.908C147.546,176.578,143.54,172.578,138.626,172.578z M138.626,186.379c-2.693,0-4.878-2.189-4.878-4.883c0-2.692,2.186-4.882,4.878-4.882c2.693,0,4.883,2.189,4.883,4.882C143.514,184.189,141.319,186.379,138.626,186.379z"/></g></svg>
-                        </div>
-                        <div class="buttonContainer">
-                            <a href="https://github.com/mdsl1/portfolio-pessoal" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                    <!--Card Inscryption Memory-->
-                    <div class="cardProject">
-                        <img src="Midias/InscryptionLowBudget.png" alt="Imagem do jogo da memória Inscryption Low Budget">
-                        <div class="line"></div>
-                        <h3>Inscryption Low Budget</h3>
-                        <p>Jogo da memória baseado no jogo Inscryption.</p>
-                        <div class="platformContainer">
-                            <p>Adaptado para:</p>
-                            &nbsp;&nbsp;<!--Espaçamento-->
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 270.729 270.729" xml:space="preserve"><g><path d="M0,55.529v124.822c0,14.763,12.1,26.771,26.974,26.771h78.03c-0.005,0.494-0.031,0.977,0.113,1.465c0.026,0.111,2.77,10.568-2.924,19.376c-0.58,0.903-0.769,1.911-0.764,2.919H80.626c-2.176,0-3.94,2.478-3.94,5.538c0,3.06,1.764,5.548,3.94,5.548h109.476c2.173,0,3.937-2.488,3.937-5.548c0-3.061-1.764-5.538-3.937-5.538h-19.896c0.005-1.008-0.179-2.016-0.766-2.919c-5.67-8.776-2.972-19.191-2.919-19.392c0.135-0.482,0.109-0.966,0.109-1.449h77.12c14.876,0,26.977-12.005,26.977-26.771V55.529c0-14.761-12.106-26.77-26.977-26.77H26.974C12.1,28.76,0,40.768,0,55.529zM158.758,230.872h-45.891c5.026-9.926,3.684-20.052,2.924-23.749h40.042C155.078,210.82,153.734,220.946,158.758,230.872zM259.557,55.529v124.822c0,8.609-7.092,15.602-15.815,15.602H26.974c-8.719,0-15.809-7.003-15.809-15.602V55.529c0-8.606,7.089-15.604,15.809-15.604h216.767C252.465,39.925,259.557,46.923,259.557,55.529z"/><path d="M25.717,54.072v106.18c0,1.602,1.289,2.893,2.888,2.893h213.503c1.597,0,2.893-1.291,2.893-2.893V54.072c0-1.596-1.296-2.887-2.893-2.887H28.61C27.012,51.186,25.717,52.481,25.717,54.072z M31.494,56.964h207.727v100.407H31.494V56.964z"/><path d="M138.626,172.578c-4.913,0-8.91,4-8.91,8.913s3.997,8.908,8.91,8.908c4.914,0,8.915-3.995,8.915-8.908C147.546,176.578,143.54,172.578,138.626,172.578z M138.626,186.379c-2.693,0-4.878-2.189-4.878-4.883c0-2.692,2.186-4.882,4.878-4.882c2.693,0,4.883,2.189,4.883,4.882C143.514,184.189,141.319,186.379,138.626,186.379z"/></g></svg>
-                        </div>
-                        <div class="buttonContainer">
-                            <a href="https://mdsl1.github.io/inscryption-memory/" target="_blank">Ver site</a>
-                            <a href="https://github.com/mdsl1/inscryption-memory" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                    <!--Website Dociê Bolos e Doces-->
-                    <div class="cardProject">
-                        <img src="Midias/Docie_WebSite.png" alt="Imagem do WebSite da Dociê Bolos e Doces">
-                        <div class="line"></div>
-                        <h3>Projeto Dociê Bolos e Doces</h3>
-                        <p>Website de vendas de uma loja fictícia de bolos e doces.</p>
-                        <div class="platformContainer">
-                            <p>Adaptado para:</p>
-                            &nbsp;&nbsp;<!--Espaçamento-->
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 270.729 270.729" xml:space="preserve"><g><path d="M0,55.529v124.822c0,14.763,12.1,26.771,26.974,26.771h78.03c-0.005,0.494-0.031,0.977,0.113,1.465c0.026,0.111,2.77,10.568-2.924,19.376c-0.58,0.903-0.769,1.911-0.764,2.919H80.626c-2.176,0-3.94,2.478-3.94,5.538c0,3.06,1.764,5.548,3.94,5.548h109.476c2.173,0,3.937-2.488,3.937-5.548c0-3.061-1.764-5.538-3.937-5.538h-19.896c0.005-1.008-0.179-2.016-0.766-2.919c-5.67-8.776-2.972-19.191-2.919-19.392c0.135-0.482,0.109-0.966,0.109-1.449h77.12c14.876,0,26.977-12.005,26.977-26.771V55.529c0-14.761-12.106-26.77-26.977-26.77H26.974C12.1,28.76,0,40.768,0,55.529zM158.758,230.872h-45.891c5.026-9.926,3.684-20.052,2.924-23.749h40.042C155.078,210.82,153.734,220.946,158.758,230.872zM259.557,55.529v124.822c0,8.609-7.092,15.602-15.815,15.602H26.974c-8.719,0-15.809-7.003-15.809-15.602V55.529c0-8.606,7.089-15.604,15.809-15.604h216.767C252.465,39.925,259.557,46.923,259.557,55.529z"/><path d="M25.717,54.072v106.18c0,1.602,1.289,2.893,2.888,2.893h213.503c1.597,0,2.893-1.291,2.893-2.893V54.072c0-1.596-1.296-2.887-2.893-2.887H28.61C27.012,51.186,25.717,52.481,25.717,54.072z M31.494,56.964h207.727v100.407H31.494V56.964z"/><path d="M138.626,172.578c-4.913,0-8.91,4-8.91,8.913s3.997,8.908,8.91,8.908c4.914,0,8.915-3.995,8.915-8.908C147.546,176.578,143.54,172.578,138.626,172.578z M138.626,186.379c-2.693,0-4.878-2.189-4.878-4.883c0-2.692,2.186-4.882,4.878-4.882c2.693,0,4.883,2.189,4.883,4.882C143.514,184.189,141.319,186.379,138.626,186.379z"/></g></svg>
-                        </div>
-                        <div class="buttonContainer">
-                            <a href="https://mdsl1.github.io/docie-bolos-e-doces/" target="_blank">Ver site</a>
-                            <a href="https://github.com/mdsl1/docie-bolos-e-doces" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                    <!--Calculadora para estudantes Numeris-->
-                    <div class="cardProject">
-                        <img src="Midias/WorkInProgress1.png" alt="Imagem do quadro 'Noite Estrelada' do Van Gogh">
-                        <div class="line"></div>
-                        <h3>Projeto Calculadora Numeris</h3>
-                        <p>Calculadora voltada para estudantes do ensino médio.</p>
-                        <div class="buttonContainer">
-                            <span class="workInProgress">Em Desenvolvimento</span>
-                            <!--a href="#" target="_blank">Ver site</a-->
-                            <a href="https://github.com/mdsl1/Calculadora-cient-fica" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                    <!--Card de projeto-->
-                    <!--div class="cardProject">
-                        <img src="Midias/WorkInProgress1.png" alt="Imagem do quadro 'Noite Estrelada' do Van Gogh">
-                        <div class="line"></div>
-                        <h3>Projeto...</h3>
-                        <p>Em breve...</p>
-                        <div class="buttonContainer">
-                            <span class="workInProgress">Em Desenvolvimento</span>
-                            <a href="#" target="_blank">Ver site</a>
-                            <a href="#" target="_blank">GitHub</a>
-                        </div>
-                    </div-->
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; Copyright 2024 - mdsl1. Todos os direitos reservados.</p>
-        </footer>
-        <!--Area de Import dos scripts utilizados-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="js/Script.js" type="text/javascript"></script>
-    </body>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sessão introdutória, com uma foto e um texto de boas vindas -->
+    <section id="introduction" class="container">
+      <div class="row align-items-center">
+        <!-- Coluna da imagem -->
+        <div class="col-md-4">
+          <div id="myPhoto" class="container"></div>
+        </div>
+        <!-- Coluna do texto inicial -->
+        <div class="col-md-8">
+          <h1 class="text-center text-md-start">Bem vindo(a) ao meu Portólio.</h1>
+          <p class="text-center text-md-start m-0">Sou Marcos Daniel da Silva Lima, <span>Desenvolvedor</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sessão sobre mim -->
+    <section id="aboutMe" class="container text-center col-10">
+      <h2 class="mb-4 mb-md-5">Sobre Mim</h2>
+      <p>Sou um desenvolvedor de 21 anos, atualmente cursando o 2º semestre de Desenvolvimento de Software Multiplataforma na Fatec. Meu interesse começou com a criação de jogos no Scratch e evoluiu para projetos mais complexos em Python, C e front-end (HTML, CSS e JavaScript).</p>
+      <p>Além disso, tenho interesse em automações com Inteligência Artificial e busco constantemente ampliar meu conhecimento por meio de projetos práticos.</p>
+      <p class="m-0">Compartilho meus projetos em um canal no YouTube e mantenho um Instagram onde posto alguns projetos de designer, além de servir como meio de contato.</p>
+    </section>
+
+     <!-- Sessão com as minhas habilidades -->
+     <section id="technologies" class="container text-center col-12 col-md-10">
+      <h2 class="mb-4 mb-md-5">Minhas Habilidades</h2>
+      <!-- Grid com as imagens das linguagens -->
+      <div id="techDescriptionContainer" class="d-grid gap-3 col-12 col-md-10 mx-auto p-3">
+        <!-- HTML -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="HTML5" data-bs-content="Linguagem de marcação usada para estruturar o conteúdo da web.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"/>
+        </a>
+        <!-- CSS -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="CSS3" data-bs-content="Linguagem de estilo usada para definir a aparência dos elementos HTML.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"/>
+        </a>
+        <!-- JavaScript -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="JavaScript" data-bs-content="Linguagem de programação usada para interatividade e lógica em sites.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
+        </a>
+        <!-- Node.JS -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Node.js" data-bs-content="Ambiente de execução JavaScript do lado do servidor.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"/>
+        </a>
+        <!-- Bootstrap -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Bootstrap" data-bs-content="Framework CSS para criação de interfaces web responsivas.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"/>
+        </a>
+        <!-- JQuerry -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="jQuery" data-bs-content="Biblioteca JavaScript que simplifica a manipulação de elementos HTML.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg"/>
+        </a>
+        <!-- PHP -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="PHP" data-bs-content="Linguagem de script para desenvolvimento web no lado do servidor.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"/>
+        </a>
+        <!-- Python -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Python" data-bs-content="Linguagem de programação de alto nível, versátil e fácil de aprender.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"/>
+        </a>
+        <!-- C -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="C" data-bs-content="Linguagem de programação de baixo nível usada para sistemas e aplicações.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"/>
+        </a>
+        <!-- Java -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Java" data-bs-content="Linguagem de programação orientada a objetos muito utilizada em aplicações robustas.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"/>
+        </a>
+        <!-- JSON -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="JSON" data-bs-content="Formato leve de troca de dados entre aplicações.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg"/>
+        </a>
+        <!-- VBA -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Visual Basic for Applications" data-bs-content="Linguagem de programação da Microsoft utilizada para automações no Excel e outras ferramentas Office, com base na sintaxe do Visual Basic.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg"/>
+        </a>
+        <!-- MySQL -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="MySQL" data-bs-content="Sistema de gerenciamento de banco de dados relacional amplamente utilizado.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"/>
+        </a>
+        <!-- Supabase -->
+        <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Supabase" data-bs-content="Plataforma backend open-source que oferece banco de dados, autenticação e storage.">
+          <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"/>
+        </a>
+      </div> 
+    </section>
+
+    <!-- Sessão com os projetos e botões para filtrar por tipo de projeto -->
+    <section id="projects" class="container">
+      <h2 class="mb-4 mb-md-5 text-center">Meus Projetos</h2>
+      <!-- Botões de filtro -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <button class="btn" onclick="filterCards('all')">Todos</button>
+        <button class="btn" onclick="filterCards('frontend')">Front-End</button>
+        <button class="btn" onclick="filterCards('backend')">Back-End</button>
+        <button class="btn" onclick="filterCards('logica')">Sistemas e Lógica</button>
+        <button class="btn" onclick="filterCards('automacao')">Automações</button>
+        <!-- button class="btn btn-dark" onclick="filterCards('desktop')">Apps Desktop</button>
+        <button class="btn btn-dark" onclick="filterCards('mobile')">Apps Mobile</button-->
+      </div>
+      <p id="filterDescription" class="text-center">Aqui estão os meus principais projetos:</p>
+      <!-- Cards -->
+      <div class="row d-flex justify-content-center" id="cardContainer">
+        <!-- Container onde os cards serão inseridos via js -->
+      </div>
+    </section>
+    
+    <footer class="p-2">
+      <div class="container-fluid px-0 w-100 text-center">
+        <p>&copy; Copyright 2024 - mdsl1. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Div para glass effect -->
+    <div id="glassEffect"></div>
+
+    <video autoplay muted loop id="backgroundVideo">
+      <source src="Midias/black-hole-background.mp4" type="video/mp4">
+    </video>
+
+    <!-- Bootstrap JS e filtro -->
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
+
