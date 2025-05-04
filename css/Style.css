@@ -205,8 +205,8 @@ footer {
 @media(max-width: 768px){
     /* Responsividade do vídeo de fundo */
     #backgroundVideo{
-        transform: scale(1.3);
-        transform: translate(35%, 20%);
+        transform: scale(1.8);
+        transform: translate(40%, 20%);
     }
     /* Responsividade das sessões e títulos de sessões */
     section {
