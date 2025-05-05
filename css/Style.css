@@ -9,8 +9,81 @@
 .hide {
     display: none !important;
 }
+.dark-mode:root {
+    /*GlassEffect*/
+    --bg-glassEffect: #232323a1;
 
-/* Estilo do background do site*/
+    /*Navbar*/
+    /* Textos */
+    --text-navbar-color: #fff;
+    --text-dropdown-controls-item-color: #fff;
+    --text-dropdown-controls-item-hover-color: #000;
+    /* SVGs */
+    --svg-links-navbar-color: #898989;
+    --svg-controls-navbar-color: #9b9b9b;
+    --svg-controls-navbar-hover-color: #fff;
+    --svg-navbar-hover-dropshadow: #fff;
+    /* Backgrounds */
+    --bg-navbar-color: #000000da;
+    --bg-dropdown-controls-color: #161616c9;
+    --bg-dropdown-controls-item-hover-color: #fff;
+    /* Links das redes sociais */
+    --svg-github-color: #ffffff;
+    --svg-linkedin-color: #00ffd5;
+    --svg-gmail-color: #ff3030;
+    --svg-instagram-color: #ff00ae;
+    --svg-youtube-color: #f00;
+
+    /*Padrão das sessões*/
+    --text-sections: #fff;
+    --text-title-sections: #ff9500;
+
+    /*Introdução*/
+    --img-url:url("../Midias/MyPhoto_ColorBlindMode.png");
+    --text-title-neon: #ffc832;
+    --text-p-neon: #fff;
+
+    /* Habilidades*/
+    --bg-tech-container: #fff;
+    --border-tech-container: #ff9500;
+
+    /*Projetos*/
+    /* Filtro de Projetos */
+    --bg-btn-filter: #ff9500;
+    --border-btn-filter: #ff9500;
+    --text-btn-filter: #000;
+    --text-btn-filter-hover: #ff9500;
+
+    /*Cards*/
+    /* Textos */
+    --text-card-title-color: #ff9500;
+    --text-card-color: #fff;
+    --text-used-tech-color: #000;
+    /* SVG */
+    --svg-card-color: #fff;
+    /* Background e border*/
+    --bg-used-tech-color: #ff9500;
+    --bg-card-color: #00000086;
+    --border-card-color: #ff9500;
+    /* Botão github*/
+    --border-github-btn-color: #754600;
+    --text-github-btn-color: #fff;
+    --bg-github-btn-color: #754600;
+    --border-github-btn-hover-color: #ff9900;
+    --text-github-btn-hover-color: #ff9900;
+    /* Botão do site */
+    --border-site-btn-color: #b78600;
+    --text-site-btn-color: #fff;
+    --bg-site-btn-color: #b78600;
+    --border-site-btn-hover-color: #ffbb00;
+    --text-site-btn-hover-color: #ffbb00;
+
+    /*Footer*/
+    --text-footer-color: #fff;
+    --bg-footer-color: #000000da;
+}
+
+/* Estilo do background do site */
 #backgroundVideo{
     position: fixed;
     bottom: 0;
@@ -25,7 +98,7 @@
     top: 0;
     left: 0;
     z-index: -99;
-    background-color: rgba(35, 35, 35, 0.633);
+    background-color: var(--bg-glassEffect); /*919191a1*/
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     width: 100%;
@@ -34,8 +107,8 @@
 
 /* Estilo da navbar */
 #navBar {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.853);
+    color: var(--text-navbar-color);
+    background-color: var(--bg-navbar-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -48,67 +121,80 @@
     transition: ease-in-out 0.3s;
 }
 #navBar svg:hover {
-    filter: drop-shadow(0 0 10px #fff);
+    filter: drop-shadow(0 0 10px var(--svg-navbar-hover-dropshadow));
 }
 .ghIcon, .lnIcon, .mlIcon, .igIcon, .ytIcon {
-    fill: #898989;
+    fill: var(--svg-links-navbar-color);
 }
 .ghIcon:hover {
-    fill: #ffffff;
+    fill: var(--svg-github-color);
 }
 .lnIcon:hover {
-    fill: #00ffd5;
+    fill: var(--svg-linkedin-color);
 }
 .mlIcon:hover {
-    fill: #ff3030;
+    fill: var(--svg-gmail-color);
 }
 .igIcon:hover {
-    fill: #ff00ae;
+    fill: var(--svg-instagram-color);
 }
 .ytIcon:hover {
-    fill: #ff0000;
+    fill: var(--svg-youtube-color);
 }
 #navBar button svg {
-    fill: #9b9b9b;
+    fill: var(--svg-controls-navbar-color);
 }
 #navBar button svg:hover {
-    fill: #ffffff;
+    fill: var(--svg-controls-navbar-hover-color);
+}
+.dropstart .dropdown-toggle {
+    background: none;
+    border: none;
+}
+.dropstart .dropdown-menu {
+    background-color: var(--bg-dropdown-controls-color);
+}
+.dropstart .dropdown-item {
+    color: var(--text-dropdown-controls-item-color);
+}
+.dropstart .dropdown-item:hover {
+    color: var(--text-dropdown-controls-item-hover-color);
+    background-color: var(--bg-dropdown-controls-item-hover-color);
 }
 
 /* Estilo para todas as sessões*/
 section {
     margin: 5%;
-    color: #fff;
+    color: var(--text-sections);
 }
 section h2 {
     font-size: 1.9rem;
-    color: #ff9500;
+    color: var(--text-title-sections);
     font-weight: bolder;
-    text-shadow: #fccd4c 1px 1px 20px;
+    text-shadow: var(--text-title-neon) 1px 1px 20px;
 }
 
 /* Estilo da sessão introdutória*/
 #myPhoto {
-    background: url("../Midias/MyPhoto_ColorBlindMode.png") no-repeat;
+    background: var(--img-url) no-repeat;
     background-size: cover;
     width: 15rem;
     height: 15rem;
 }
 #introduction h1 {
-    color: #ff9500;
-    text-shadow: #ffdf86 1px 1px 20px;
+    color: var(--text-title-sections);
+    text-shadow: var(--text-title-neon) 1px 1px 20px;
     font-weight: bolder;
     font-size: 2rem;
 }
 #introduction p {
-    color: #fff;
-    text-shadow: #ffffff 1px 1px 20px;
+    text-shadow: var(--text-p-neon) 1px 1px 20px;
     font-size: 1.5rem;
 }
 #introduction span {
-    color: #ff9500;
+    color: var(--text-title-sections);
     font-weight: bolder;
-    text-shadow: #fccd4c 1px 1px 20px;
+    text-shadow: var(--text-title-neon) 1px 1px 20px;
 }
 
 /* Estilo da sessão sobre mim */
@@ -118,10 +204,13 @@ section h2 {
 
 /* Estilo da sessão com as minhas habilidades */
 #techDescriptionContainer {
-    background-color: #ffffff;
+    background-color: var(--bg-tech-container);
     border-radius: 9px;
     grid-template-columns: repeat(5, 1fr);
-    border: #ff9500 5px double;
+    border: var(--border-tech-container) 5px double;
+}
+#technologies p {
+    font-size: 1.2rem;
 }
 .techIcon {
     width: 3rem;
@@ -133,14 +222,15 @@ section h2 {
 
 /* Estilo da sessão dos meus projetos*/
 #projects button {
-    background-color: #ff9500;
-    border: #ff9500 2px solid;
+    background-color: var(--bg-btn-filter);
+    border: var(--border-btn-filter) 2px solid;
+    color: var(--text-btn-filter);
     font-weight: bolder;
-    transition: all 0.2s;
+    transition: ease-in-out 0.3s;
 }
 #projects button:hover {
     background: none;
-    color: #ff9500;
+    color: var(--text-btn-filter-hover);
 }
 #filterDescription {
     font-size: 1.2rem;
@@ -148,49 +238,49 @@ section h2 {
 
 /* Estilo dos cards dos projetos */
 .card {
-    color: #fff;
-    background-color: #00000086;
-    border: #ff9500 5px double;
+    color: var(--text-card-color);
+    background-color: var(--bg-card-color);
+    border: var(--border-card-color) 5px double;
 }
 .card svg {
     width: 2rem;
     height: 2rem;
-    fill: #fff;
+    fill: var(--svg-card-color);
 }
 .card h5 {
-    color: #ff9500;
+    color: var(--text-card-title-color);
 }
 .card-text {
     font-size: 1.1rem;
 }
 .github-link {
-    border: #754600 3px solid;
-    background-color: #754600;
-    color: #fff;
+    border: var(--border-github-btn-color) 3px solid;
+    background-color: var(--bg-github-btn-color);
+    color: var(--text-github-btn-color);
     font-weight: bolder;
     transition: all 0.2s;
 }
 .github-link:hover {
     background: none;
-    color: #ff9900;
-    border: #ff9900 3px solid;
+    color: var(--text-github-btn-hover-color);
+    border: var(--border-github-btn-hover-color) 3px solid;
 }
 .site-link {
-    border: #b78600 3px solid;
-    background-color: #b78600;
-    color: #fff;
+    border: var(--border-site-btn-color) 3px solid;
+    background-color: var(--bg-site-btn-color);
+    color: var(--text-site-btn-color);
     font-weight: bolder;
     transition: all 0.2s;
 }
 .site-link:hover {
-    color: #ffbb00;
-    border: #ffbb00 3px solid;
+    color: var(--text-site-btn-hover-color);
+    border: var(--border-site-btn-hover-color) 3px solid;
     background: none;
 }
 .usedTech{
     font-size: 0.8rem;
-    color: #000;
-    background-color: #ff9500;
+    color: var(--text-used-tech-color);
+    background-color: var(--bg-used-tech-color);
     padding: 1% 2%;
     border-radius: 5px;
 }
@@ -198,8 +288,8 @@ section h2 {
 /* Estilo do rodapé*/
 footer {
     font-size: 1rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.853);
+    color: var(--text-footer-color);
+    background-color: var(--bg-footer-color);
 }
 
 @media(max-width: 768px){
@@ -224,19 +314,19 @@ footer {
         height: 1.5rem;
     }
     .ghIcon {
-        fill: #ffffff;
+        fill: var(--svg-github-color);
     }
     .lnIcon {
-        fill: #00ffd5;
+        fill: var(--svg-linkedin-color);
     }
     .mlIcon {
-        fill: #ff3030;
+        fill: var(--svg-gmail-color);
     }
     .igIcon {
-        fill: #ff00ae;
+        fill: var(--svg-instagram-color);
     }
     .ytIcon {
-        fill: #ff0000;
+        fill: var(--svg-youtube-color);
     }
     /* Responsividade da sessão introdutória*/
     #myPhoto {
@@ -256,6 +346,9 @@ footer {
         margin-bottom: 5%;
     }
     /* Responsividade da sessão de habilidades*/
+    #technologies p {
+        font-size: 1rem;
+    }
     .techIcon {
         width: 1.8rem;
     }

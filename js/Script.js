@@ -2,7 +2,25 @@
 
 //Variaveis globais
 const page = document.querySelector("html");
+let animationEnabled = true;
 
+function pauseAnimations() {
+    const pauseBtn = document.getElementById("pauseBgBtn");
+    const video = document.getElementById("backgroundVideo");
+
+    if (animationEnabled) {
+        // Desativa animação: pausa vídeo, esconde, mostra imagem
+        video.pause();
+        pauseBtn.textContent = "Despausar animações";
+    }
+    else {
+        // Ativa animação: mostra vídeo e remove imagem
+        video.play();
+        pauseBtn.textContent = "Pausar animações";
+    }
+
+    animationEnabled = !animationEnabled;
+}
 //Função que aplica a coloração padrão
 function defaultMode(){
     page.classList.remove("lightMode", "colorBlindMode");
