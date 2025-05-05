@@ -88,7 +88,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    transform: translate(10%,5%);
+    transform: translate(0,5%);
     min-width: 100%;
     min-height: 100%;
     z-index: -999;
@@ -277,7 +277,7 @@ section h2 {
     border: var(--border-site-btn-hover-color) 3px solid;
     background: none;
 }
-.usedTech{
+.usedTech {
     font-size: 0.8rem;
     color: var(--text-used-tech-color);
     background-color: var(--bg-used-tech-color);
@@ -292,7 +292,13 @@ footer {
     background-color: var(--bg-footer-color);
 }
 
-@media(max-width: 768px){
+@media (max-width: 1366px) {
+    #backgroundVideo{
+        transform: translate(10%,5%);
+    }
+}
+
+@media(max-width: 768px) {
     /* Responsividade do vídeo de fundo */
     #backgroundVideo{
         transform: scale(1.8);
