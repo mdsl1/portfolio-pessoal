@@ -1,0 +1,73 @@
+.dark-mode:root {
+    /*GlassEffect*/
+    --bg-glassEffect: #232323a1;
+
+    /*Navbar*/
+    /* Textos */
+    --text-navbar-color: #fff;
+    --text-dropdown-controls-item-color: #fff;
+    --text-dropdown-controls-item-hover-color: #000;
+    /* SVGs */
+    --svg-links-navbar-color: #898989;
+    --svg-controls-navbar-color: #9b9b9b;
+    --svg-controls-navbar-hover-color: #fff;
+    --svg-navbar-hover-dropshadow: #fff;
+    /* Backgrounds */
+    --bg-navbar-color: #000000da;
+    --bg-dropdown-controls-color: #161616c9;
+    --bg-dropdown-controls-item-hover-color: #fff;
+    /* Links das redes sociais */
+    --svg-github-color: #ffffff;
+    --svg-linkedin-color: #00ffd5;
+    --svg-gmail-color: #ff3030;
+    --svg-instagram-color: #ff00ae;
+    --svg-youtube-color: #f00;
+
+    /*Padrão das sessões*/
+    --text-sections: #fff;
+    --text-title-sections: #ff9500;
+
+    /*Introdução*/
+    --img-url:url("../Midias/MyPhoto_ColorBlindMode.png");
+    --text-title-neon: #ffc832;
+    --text-p-neon: #fff;
+
+    /* Habilidades*/
+    --bg-tech-container: #fff;
+    --border-tech-container: #ff9500;
+
+    /*Projetos*/
+    /* Filtro de Projetos */
+    --bg-btn-filter: #ff9500;
+    --border-btn-filter: #ff9500;
+    --text-btn-filter: #000;
+    --text-btn-filter-hover: #ff9500;
+
+    /*Cards*/
+    /* Textos */
+    --text-card-title-color: #ff9500;
+    --text-card-color: #fff;
+    --text-used-tech-color: #000;
+    /* SVG */
+    --svg-card-color: #fff;
+    /* Background e border*/
+    --bg-used-tech-color: #ff9500;
+    --bg-card-color: #00000086;
+    --border-card-color: #ff9500;
+    /* Botão github*/
+    --border-github-btn-color: #754600;
+    --text-github-btn-color: #fff;
+    --bg-github-btn-color: #754600;
+    --border-github-btn-hover-color: #ff9900;
+    --text-github-btn-hover-color: #ff9900;
+    /* Botão do site */
+    --border-site-btn-color: #b78600;
+    --text-site-btn-color: #fff;
+    --bg-site-btn-color: #b78600;
+    --border-site-btn-hover-color: #ffbb00;
+    --text-site-btn-hover-color: #ffbb00;
+
+    /*Footer*/
+    --text-footer-color: #fff;
+    --bg-footer-color: #000000da;
+}

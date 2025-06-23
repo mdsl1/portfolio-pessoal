@@ -1,3 +1,5 @@
+@import url('variaveis.css');
+
 /* Configurações padrão do site */
 * {
     font-size: 100%;
@@ -9,79 +11,45 @@
 .hide {
     display: none !important;
 }
-.dark-mode:root {
-    /*GlassEffect*/
-    --bg-glassEffect: #232323a1;
 
-    /*Navbar*/
-    /* Textos */
-    --text-navbar-color: #fff;
-    --text-dropdown-controls-item-color: #fff;
-    --text-dropdown-controls-item-hover-color: #000;
-    /* SVGs */
-    --svg-links-navbar-color: #898989;
-    --svg-controls-navbar-color: #9b9b9b;
-    --svg-controls-navbar-hover-color: #fff;
-    --svg-navbar-hover-dropshadow: #fff;
-    /* Backgrounds */
-    --bg-navbar-color: #000000da;
-    --bg-dropdown-controls-color: #161616c9;
-    --bg-dropdown-controls-item-hover-color: #fff;
-    /* Links das redes sociais */
-    --svg-github-color: #ffffff;
-    --svg-linkedin-color: #00ffd5;
-    --svg-gmail-color: #ff3030;
-    --svg-instagram-color: #ff00ae;
-    --svg-youtube-color: #f00;
-
-    /*Padrão das sessões*/
-    --text-sections: #fff;
-    --text-title-sections: #ff9500;
-
-    /*Introdução*/
-    --img-url:url("../Midias/MyPhoto_ColorBlindMode.png");
-    --text-title-neon: #ffc832;
-    --text-p-neon: #fff;
-
-    /* Habilidades*/
-    --bg-tech-container: #fff;
-    --border-tech-container: #ff9500;
-
-    /*Projetos*/
-    /* Filtro de Projetos */
-    --bg-btn-filter: #ff9500;
-    --border-btn-filter: #ff9500;
-    --text-btn-filter: #000;
-    --text-btn-filter-hover: #ff9500;
-
-    /*Cards*/
-    /* Textos */
-    --text-card-title-color: #ff9500;
-    --text-card-color: #fff;
-    --text-used-tech-color: #000;
-    /* SVG */
-    --svg-card-color: #fff;
-    /* Background e border*/
-    --bg-used-tech-color: #ff9500;
-    --bg-card-color: #00000086;
-    --border-card-color: #ff9500;
-    /* Botão github*/
-    --border-github-btn-color: #754600;
-    --text-github-btn-color: #fff;
-    --bg-github-btn-color: #754600;
-    --border-github-btn-hover-color: #ff9900;
-    --text-github-btn-hover-color: #ff9900;
-    /* Botão do site */
-    --border-site-btn-color: #b78600;
-    --text-site-btn-color: #fff;
-    --bg-site-btn-color: #b78600;
-    --border-site-btn-hover-color: #ffbb00;
-    --text-site-btn-hover-color: #ffbb00;
-
-    /*Footer*/
-    --text-footer-color: #fff;
-    --bg-footer-color: #000000da;
+/* Estilo do Preloader */
+/* Preloader em tela cheia */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s ease-out;
 }
+/* Spinner (círculo girando) */
+.spinner {
+    border: 4px solid #ffd69c;
+    border-top: 4px solid #ff9500;
+    filter: drop-shadow(0 0 5px #ffbb5c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: girar 1s linear infinite;
+}
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Esconde suavemente o preloader */
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 /* Estilo do background do site */
 #backgroundVideo{
@@ -175,11 +143,32 @@ section h2 {
 }
 
 /* Estilo da sessão introdutória*/
+.imgBorder {
+    width: 15.5rem;
+    height: 15.5rem;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #301c00, #301c00, #ef8b00); /* Borda */
+    animation: girarBorda 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #myPhoto {
-    background: var(--img-url) no-repeat;
+    background: url("../Midias/Myphoto.png") no-repeat;
     background-size: cover;
     width: 15rem;
     height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: antiGirar 2s linear infinite;
+}
+@keyframes girarBorda {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes antiGirar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
 }
 #introduction h1 {
     color: var(--text-title-sections);
