@@ -7,16 +7,24 @@ let animationEnabled = true;
 function pauseAnimations() {
     const pauseBtn = document.getElementById("pauseBgBtn");
     const video = document.getElementById("backgroundVideo");
+    const borderPhoto = document.getElementById("imgBorder");
+    const myPhoto = document.getElementById("myPhoto");
 
     if (animationEnabled) {
         // Desativa animação: pausa vídeo, esconde, mostra imagem
         video.pause();
         pauseBtn.textContent = "Despausar animações";
+        borderPhoto.classList.remove("girarBorda");
+        borderPhoto.classList.add("bordaEstatica");
+        myPhoto.classList.remove("antiGirar");
     }
     else {
         // Ativa animação: mostra vídeo e remove imagem
         video.play();
         pauseBtn.textContent = "Pausar animações";
+        borderPhoto.classList.add("girarBorda");
+        borderPhoto.classList.remove("bordaEstatica");
+        myPhoto.classList.add("antiGirar");
     }
 
     animationEnabled = !animationEnabled;

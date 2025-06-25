@@ -143,12 +143,10 @@ section h2 {
 }
 
 /* Estilo da sessão introdutória*/
-.imgBorder {
+#imgBorder {
     width: 15.5rem;
     height: 15.5rem;
     border-radius: 50%;
-    background: conic-gradient(from 0deg, #301c00, #301c00, #ef8b00); /* Borda */
-    animation: girarBorda 2s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,15 +158,24 @@ section h2 {
     height: 15rem;
     border-radius: 50%;
     object-fit: cover;
+}
+.antiGirar {
+    animation: girarBorda 2s linear infinite;
+}
+.bordaEstatica {
+    background: #ef8b00; /* Borda */
+}
+.girarBorda {
+    background: conic-gradient(from 0deg, #301c00, #301c00, #ef8b00); /* Borda */
     animation: antiGirar 2s linear infinite;
 }
 @keyframes girarBorda {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  100% { transform: rotate(-360deg); }
 }
 @keyframes antiGirar {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(-360deg); }
+  100% { transform: rotate(360deg); }
 }
 #introduction h1 {
     color: var(--text-title-sections);

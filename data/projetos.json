@@ -118,4 +118,82 @@
             "3": "TkInter"
         }
     }
+    ,
+    {
+        "title": "Projeto NIC",
+        "data-filter": "backend",
+        "img": "Midias/Projetos/Projeto_NIC.png",
+        "descricao": "Projeto feito com mais dois colegas do site de Iniciação Científica da Fatec de Marília-SP.",
+        "adaptado_para":
+        {
+            "celular": true,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/BackEnd-Boys2/Projeto-NIC-2-Semestre",
+            "site": "n/a"
+        },
+        "technologies":
+        {   
+            "0": "HTML",
+            "1": "CSS",
+            "2": "Javascript",
+            "3": "Bootstrap",
+            "4": "PHP",
+            "5": "SQL",
+            "6": "JQuery"
+        }
+    }
+    ,
+    {
+        "title": "Projeto Life",
+        "data-filter": "backend",
+        "img": "Midias/Projetos/Projeto_Life.png",
+        "descricao": "Projeto de jogo web para a empresa Life de Marília-SP.",
+        "adaptado_para":
+        {
+            "celular": true,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/ProjetosEstagioLife/PROJETO-LIFE",
+            "site": "n/a"
+        },
+        "technologies":
+        {   
+            "0": "HTML",
+            "1": "CSS",
+            "2": "Javascript",
+            "3": "Bootstrap",
+            "4": "PHP",
+            "5": "SQL"
+        }
+    }
+    ,
+    {
+        "title": "Miner's Shopping",
+        "data-filter": "backend",
+        "img": "Midias/Projetos/Miners_Shopping.png",
+        "descricao": "Website no estilo E-Commerce de uma loja de mineradores.",
+        "adaptado_para":
+        {
+            "celular": true,
+            "pc": true
+        },
+        "links":
+        {
+            "github": "https://github.com/mdsl1/Aulas-DSM-Fatec/tree/main/2_Semestre/DSM_Desenvolvimento_Web2/Exercicios/Ex-Ecommerce",
+            "site": "n/a"
+        },
+        "technologies":
+        {   
+            "0": "HTML",
+            "1": "CSS",
+            "2": "Javascript",
+            "3": "PHP",
+            "4": "SQL"
+        }
+    }
 ]
