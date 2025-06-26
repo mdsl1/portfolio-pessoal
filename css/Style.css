@@ -237,6 +237,8 @@ section h2 {
     color: var(--text-card-color);
     background-color: var(--bg-card-color);
     border: var(--border-card-color) 5px double;
+    height: 100%;
+    width: 100%;
 }
 .card svg {
     width: 2rem;
@@ -274,7 +276,7 @@ section h2 {
     background: none;
 }
 .usedTech {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--text-used-tech-color);
     background-color: var(--bg-used-tech-color);
     padding: 1% 2%;
@@ -369,7 +371,7 @@ footer {
         font-size: 1rem;
     }
     .usedTech{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     /* Responsividade do rodapé*/
     footer {
