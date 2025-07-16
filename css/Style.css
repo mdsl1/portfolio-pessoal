@@ -93,21 +93,27 @@
 }
 .ghIcon, .lnIcon, .mlIcon, .igIcon, .ytIcon {
     fill: var(--svg-links-navbar-color);
+    color: var(--svg-links-navbar-color);
 }
 .ghIcon:hover {
     fill: var(--svg-github-color);
+    color: var(--svg-github-color);
 }
 .lnIcon:hover {
     fill: var(--svg-linkedin-color);
+    color: var(--svg-linkedin-color);
 }
 .mlIcon:hover {
     fill: var(--svg-gmail-color);
+    color: var(--svg-gmail-color);
 }
 .igIcon:hover {
     fill: var(--svg-instagram-color);
+    color: var(--svg-instagram-color);
 }
 .ytIcon:hover {
     fill: var(--svg-youtube-color);
+    color: var(--svg-youtube-color);
 }
 #navBar button svg {
     fill: var(--svg-controls-navbar-color);
@@ -283,6 +289,72 @@ section h2 {
     border-radius: 5px;
 }
 
+/* Estilo do Form de Contato*/
+#contact {
+    width: 100%;
+}
+#contactContainer p:not(a p) {
+    margin-bottom: 2%;
+}
+#contactContainer p:not(a p):last-of-type {
+    margin-bottom: 7%;
+}
+#socialMediasContainer a, #socialMediasContainer a:hover {
+    text-decoration: none;
+    width: 100%;
+    padding: 2% 5%;
+    border-radius: 10px;
+    background-color: var(--bg-card-color);
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 0 5%;
+    transition: ease-in-out 0.3s;
+}
+#socialMediasContainer a:hover {
+    background-color: #000;
+}
+#socialMediasContainer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+#socialMediasContainer svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: ease-in-out 0.3s;
+}
+#socialMediasContainer svg:hover {
+    filter: drop-shadow(0 0 10px var(--svg-navbar-hover-dropshadow));
+}
+
+.formLine{
+    margin-top: 3%;
+    width: 100%;
+}
+.formLine:first-of-type {
+    margin: 0;
+}
+.formLine input, .formLine textarea {
+    margin-top: 1%;
+    padding: 2% 3%;
+    border-radius: 10px;
+    border: var(--border-card-color);
+}
+#btnMsg {
+    background-color: var(--bg-btn-filter);
+    border: var(--border-btn-filter) 2px solid;
+    color: var(--text-btn-filter);
+    margin: 3% auto 0 auto;
+    font-weight: bolder;
+    transition: ease-in-out 0.3s;
+}
+#btnMsg:hover {
+    background: none;
+    color: var(--text-btn-filter-hover);
+}
+
+
+
 /* Estilo do rodapé*/
 footer {
     font-size: 1rem;
@@ -319,23 +391,32 @@ footer {
     }
     .ghIcon {
         fill: var(--svg-github-color);
+        color: var(--svg-github-color);
     }
     .lnIcon {
         fill: var(--svg-linkedin-color);
-    }
+        color: var(--svg-linkedin-color);        
+    }   
     .mlIcon {
         fill: var(--svg-gmail-color);
+        color: var(--svg-gmail-color);
     }
     .igIcon {
         fill: var(--svg-instagram-color);
+        color: var(--svg-instagram-color);
     }
     .ytIcon {
         fill: var(--svg-youtube-color);
+        color: var(--svg-youtube-color);
     }
     /* Responsividade da sessão introdutória*/
     #myPhoto {
         width: 10rem;
         height: 10rem;
+    }
+    #imgBorder {
+        width: 10.5rem;
+        height: 10.5rem;
     }
     #introduction h1 { 
         font-size: 1.6rem;
@@ -373,6 +454,19 @@ footer {
     .usedTech{
         font-size: 0.6rem;
     }
+
+    /* Responsividade da área de contatos*/
+    #contactContainer {
+        flex-wrap: wrap !important;
+    }
+    #contactContainer p:not(a p){
+        font-size: 0.9rem;
+        margin-bottom: 3%;
+    }
+    #btnMsg {
+        margin-top: 5%;
+    }
+
     /* Responsividade do rodapé*/
     footer {
         font-size: 0.8rem;
