@@ -1,5 +1,5 @@
 // Função para carregar os dados do arquivo json
-async function carregarDados() {
+async function carregarProjetos() {
     try {
         const response = await fetch('https://api-portfolio-qs3s.onrender.com/projetos');
         if (!response.ok) {
@@ -48,7 +48,6 @@ function createCards(projetos) {
         Object.values(projeto.tecnologias).forEach(tech => {
             tecnologiasHTML += `<p class="usedTech m-0">${tech}</p>`;
         });
-
 
         // Cria definitivamente o card com todos os dados do json já validados e verificados, e insere no container dos cards
         card.innerHTML = `
