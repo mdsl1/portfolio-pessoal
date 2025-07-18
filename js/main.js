@@ -1,5 +1,5 @@
 // Função para carregar os dados do arquivo json
-async function carregarDados() {
+async function carregarProjetos() {
   try {
     const response = await fetch('https://api-portfolio-qs3s.onrender.com/projetos');
     if (!response.ok) {
@@ -7,6 +7,19 @@ async function carregarDados() {
     }
     const projetos = await response.json();
     createCards(projetos);
+  } catch (erro) {
+    console.error('Erro ao carregar dados da API:', erro);
+  }
+}
+// Função para carregar os dados do arquivo json
+async function carregarTecnologias() {
+  try {
+    const response = await fetch('https://api-portfolio-qs3s.onrender.com/tecnologias/show');
+    if (!response.ok) {
+      throw new Error('Erro ao buscar dados da API');
+    }
+    const tecnologias = await response.json();
+    createTechBtn(tecnologias);
   } catch (erro) {
     console.error('Erro ao carregar dados da API:', erro);
   }
@@ -75,4 +88,6 @@ function createCards(projetos) {
 
 
 // Chama a função de importar o JSON ao carregar a página
-document.addEventListener('DOMContentLoaded', carregarDados);
+document.addEventListener('DOMContentLoaded', carregarProjetos);
+// Chama a função de importar o JSON ao carregar a página
+document.addEventListener('DOMContentLoaded', carregarTecnologias);
