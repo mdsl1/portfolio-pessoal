@@ -84,57 +84,7 @@
         <p class="text-center">Clique em um ícone para ver a descrição:</p>
         <!-- Grid com as imagens das linguagens -->
         <div id="techDescriptionContainer" class="d-grid gap-3 col-12 col-md-10 mx-auto p-3">
-          <!-- HTML -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="HTML5" data-bs-content="Linguagem de marcação usada para estruturar o conteúdo da web.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"/>
-          </a>
-          <!-- CSS -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="CSS3" data-bs-content="Linguagem de estilo usada para definir a aparência dos elementos HTML.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"/>
-          </a>
-          <!-- JavaScript -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="JavaScript" data-bs-content="Linguagem de programação usada para interatividade e lógica em sites.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
-          </a>
-          <!-- Node.JS -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Node.js" data-bs-content="Ambiente de execução JavaScript do lado do servidor.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"/>
-          </a>
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Typescript" data-bs-content="Linguagem de programação baseada em JavaScript que adiciona tipagem estática opcional.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"/>
-          </a>
-          <!-- Bootstrap -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Bootstrap" data-bs-content="Framework CSS para criação de interfaces web responsivas.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"/>
-          </a>
-          <!-- PHP -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="PHP" data-bs-content="Linguagem de script para desenvolvimento web no lado do servidor.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"/>
-          </a>
-          <!-- Python -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Python" data-bs-content="Linguagem de programação de alto nível, versátil e fácil de aprender.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"/>
-          </a>
-          <!-- C -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="C" data-bs-content="Linguagem de programação de baixo nível usada para sistemas e aplicações.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"/>
-          </a>
-          <!-- VBA -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Visual Basic for Applications" data-bs-content="Linguagem de programação da Microsoft utilizada para automações no Excel e outras ferramentas Office, com base na sintaxe do Visual Basic.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg"/>
-          </a>
-          <!-- JSON -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="JSON" data-bs-content="Formato leve de troca de dados entre aplicações.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg"/>
-          </a>
-          <!-- MySQL -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="MySQL" data-bs-content="Sistema de gerenciamento de banco de dados relacional amplamente utilizado.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"/>
-          </a>
-          <!-- Supabase -->
-          <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Supabase" data-bs-content="Plataforma backend open-source que oferece banco de dados, autenticação e storage.">
-            <img class="techIcon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"/>
-          </a>
+          <!-- Container onde os botões serão inseridos via js -->
         </div> 
       </section>
   
@@ -200,7 +150,7 @@
 
             <div class="formLine d-flex flex-column">
               <label for="msg">Mensagem:</label>
-              <textarea type="text" id="msg" name="msg" rows="4" cols="50"></textarea>
+              <textarea type="text" id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
             </div>
 
             <button id="btnMsg" class="btn" type="submit">Enviar Mensagem</button>

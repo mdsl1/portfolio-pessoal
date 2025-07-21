@@ -1,34 +1,51 @@
-// Função para carregar os dados do arquivo json
+// Função para buscar os dados da API na rota de Projetos
 async function carregarProjetos() {
     try {
+        // Faz uma requisição para a API para buscar os projetos
         const response = await fetch('https://api-portfolio-qs3s.onrender.com/projetos');
         if (!response.ok) {
-        throw new Error('Erro ao buscar dados da API');
+            throw new Error('Erro ao buscar dados da API');
         }
+
+        // Pega os dados da API e armazena na variável projetos
         const projetos = await response.json();
-        createCards(projetos);
+        // Chama a função para criar os cards com os projetos
+        await createCards(projetos);
+
+        // Chama a função para finalizar o preloader após carregar os projetos
+        finalizarPreloader();
+
     } catch (erro) {
         console.error('Erro ao carregar dados da API:', erro);
     }
 }
-// Função para carregar os dados do arquivo json
+
+// Função para buscar os dados da API na rota de Tecnologias
 async function carregarTecnologias() {
-  try {
-    const response = await fetch('https://api-portfolio-qs3s.onrender.com/tecnologias/show');
-    if (!response.ok) {
-      throw new Error('Erro ao buscar dados da API');
+    try {
+        // Faz uma requisição para a API para buscar as tecnologias
+        const response = await fetch('https://api-portfolio-qs3s.onrender.com/tecnologias/show');
+        if (!response.ok) {
+            throw new Error('Erro ao buscar dados da API');
+        }
+        // Pega os dados da API e armazena na variável tecnologias
+        const tecnologias = await response.json();
+        // Chama a função para criar os botões de tecnologias
+        createTechBtn(tecnologias);
+        
+        // Chama a função para carregar os projetos após carregar as tecnologias
+        carregarProjetos();
+
+    } catch (erro) {
+        console.error('Erro ao carregar dados da API:', erro);
     }
-    const tecnologias = await response.json();
-    createTechBtn(tecnologias);
-  } catch (erro) {
-    console.error('Erro ao carregar dados da API:', erro);
-  }
 }
 
-function createCards(projetos) {
+// Função que cria e insere os cards
+async function createCards(projetos) {
     // Pega o container onde serão inseridos os cards e limpa eles inicialmente
     const container = document.getElementById("cardContainer");
-    container.innerHTML = ''; // Limpa o container antes
+    container.innerHTML = ''; // Limpa o container antes de inserir valores
 
     // Depois, para cada objeto no json, cria e preenche o card
     projetos.forEach(projeto => {
@@ -78,8 +95,104 @@ function createCards(projetos) {
     });
 }
 
+// Função que cria e insere os botões de tecnologias
+function createTechBtn(tecnologias) {
+    // Pega o container onde serão inseridos os botões e limpa ele inicialmente
+    const container = document.getElementById("techDescriptionContainer");
+    container.innerHTML = ''; // Limpa o container antes de inserir valores
 
-// Chama a função de importar o JSON ao carregar a página
-document.addEventListener('DOMContentLoaded', carregarProjetos);
+    // Cria um botão para cada tecnologia no array
+    tecnologias.forEach(tech => { 
+        let btn = document.createElement("a");
+
+        // Define os atributos do botão
+        btn.setAttribute("tabindex", "0");
+        btn.setAttribute("role", "button");
+        btn.setAttribute("data-bs-toggle", "popover");
+        btn.setAttribute("data-bs-trigger", "focus");
+        btn.setAttribute("title", tech.nome);
+        btn.setAttribute("data-bs-content", tech.descricao);
+
+        btn.innerHTML = `<img class="techIcon" src="${tech.icone_tech}"/>`;
+
+        // Adiciona o botão ao container
+        container.appendChild(btn);
+    });
+
+    // Ativa os popovers nos novos elementos
+    ativarPopovers();
+}
+
+// Função que ativa os popovers do Bootstrap
+function ativarPopovers() {
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    popoverTriggerList.forEach(el => new bootstrap.Popover(el));
+}
+
+// Função que insere os dados do formulário no banco de dados
+async function enviarFormulario() {
+    // Pega os valores dos campos do formulário
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let assunto = document.getElementById("assunto").value;
+    let mensagem = document.getElementById("mensagem").value;
+
+    // Verifica se os campos estão preenchidos
+    if (!nome || !email || !assunto || !mensagem) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    try {
+        // Faz uma requisição POST para a API com os dados do formulário
+        const response = await fetch('https://api-portfolio-qs3s.onrender.com/mensagem', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nome, email, assunto ,mensagem })
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao enviar o formulário');
+        }
+
+        // Limpa os campos do formulário após o envio
+        document.getElementById("nome").value = '';
+        document.getElementById("email").value = '';
+        document.getElementById("assunto").value = '';
+        document.getElementById("mensagem").value = '';
+
+        alert("Mensagem enviada com sucesso!");
+
+    } catch (erro) {
+        console.error('Erro ao enviar o formulário:', erro);
+        alert("Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.");
+    }
+}
+
+// Função que desativa o preloader e exibe o conteúdo principal
+function finalizarPreloader() {
+    const preloader = document.getElementById("preloader");
+    const conteudo = document.getElementById("mainContent");
+
+    // Adiciona classe de fade-out
+    preloader.classList.add("fade-out");
+
+    // Aguarda a transição para esconder de vez
+    setTimeout(() => {
+        preloader.style.display = "none";
+        conteudo.style.display = "block";
+    }, 1000); // corresponde à duração da transição
+}
+
+// Pega o botão de enviar mensagem pelo ID
+let btnMsg = document.getElementById("btnMsg");
+// Adiciona um evento de clique ao botão de enviar mensagem
+btnMsg.addEventListener("click", (event) => {
+    event.preventDefault(); // Previne o comportamento padrão do botão de submit
+    enviarFormulario(); // Chama a função para enviar o formulário
+});
+
 // Chama a função de importar o JSON ao carregar a página
 document.addEventListener('DOMContentLoaded', carregarTecnologias);

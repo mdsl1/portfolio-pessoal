@@ -41,13 +41,13 @@
     animation: girar 1s linear infinite;
 }
 @keyframes girar {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 /* Esconde suavemente o preloader */
 #preloader.fade-out {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 
@@ -176,12 +176,12 @@ section h2 {
     animation: antiGirar 2s linear infinite;
 }
 @keyframes girarBorda {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
 }
 @keyframes antiGirar {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 #introduction h1 {
     color: var(--text-title-sections);
@@ -321,10 +321,6 @@ section h2 {
 #socialMediasContainer svg {
     width: 2.5rem;
     height: 2.5rem;
-    transition: ease-in-out 0.3s;
-}
-#socialMediasContainer svg:hover {
-    filter: drop-shadow(0 0 10px var(--svg-navbar-hover-dropshadow));
 }
 
 .formLine{

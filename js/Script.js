@@ -84,25 +84,3 @@ function filterCards(filterType) {
         }
     });
 }
-
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-    const conteudo = document.getElementById("mainContent");
-
-    // Adiciona classe de fade-out
-    preloader.classList.add("fade-out");
-
-    // Aguarda a transição para esconder de vez
-    setTimeout(() => {
-      preloader.style.display = "none";
-      conteudo.style.display = "block";
-    }, 1000); // corresponde à duração da transição
-  });
-
-// Chama a função para ativar os popovers ao carregar a página
-document.addEventListener('DOMContentLoaded', function () {
-    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-    popoverTriggerList.forEach(function (popoverTriggerEl) {
-      new bootstrap.Popover(popoverTriggerEl);
-    });
-  });
