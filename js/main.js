@@ -139,7 +139,7 @@ async function enviarFormulario() {
 
     // Verifica se os campos estão preenchidos
     if (!nome || !email || !assunto || !mensagem) {
-        alert("Por favor, preencha todos os campos.");
+        showAlert("Por favor, preencha todos os campos.");
         return;
     }
 
@@ -163,12 +163,49 @@ async function enviarFormulario() {
         document.getElementById("assunto").value = '';
         document.getElementById("mensagem").value = '';
 
-        alert("Mensagem enviada com sucesso!");
+        showAlert("Mensagem enviada com sucesso. Obrigado pelo contato!");
 
     } catch (erro) {
         console.error('Erro ao enviar o formulário:', erro);
-        alert("Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.");
+        showAlert("Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.");
     }
+}
+
+function showAlert(t) {
+    // Pega o elemento de alerta pelo ID
+    const alerta = document.getElementById("alerta");
+
+    // Define o texto do alerta
+    alerta.textContent = t;
+
+    if(t.includes("sucesso")) {
+        // Se a mensagem de sucesso, adiciona a classe de sucesso
+        alerta.classList.add("alert-success");
+        alerta.classList.remove("alert-warning");
+        alerta.classList.remove("alert-danger");
+    }
+    else if (t.includes("preencha")) {
+        // Se a mensagem de sucesso, adiciona a classe de sucesso
+        alerta.classList.add("alert-warning");
+        alerta.classList.remove("alert-danger");
+        alerta.classList.remove("alert-success");
+    }
+    else {
+        // Se a mensagem de sucesso, adiciona a classe de sucesso
+        alerta.classList.add("alert-danger");
+        alerta.classList.remove("alert-warning");
+        alerta.classList.remove("alert-success");
+    }
+
+    // Exibe o alerta
+    alerta.classList.remove("d-none");
+    alerta.classList.add("d-block");
+
+    // Define um timeout para esconder o alerta após 3 segundos
+    setTimeout(() => {
+        alerta.classList.remove("d-block");
+        alerta.classList.add("d-none");
+    }, 3000);
 }
 
 // Função que desativa o preloader e exibe o conteúdo principal
