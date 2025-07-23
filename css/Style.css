@@ -12,6 +12,7 @@
     display: none !important;
 }
 
+
 /* Estilo do Preloader */
 /* Preloader em tela cheia */
 #preloader {
@@ -72,6 +73,7 @@
     width: 100%;
     height: 100%;
 }
+
 
 /* Estilo da navbar */
 #navBar {
@@ -136,6 +138,7 @@
     background-color: var(--bg-dropdown-controls-item-hover-color);
 }
 
+
 /* Estilo para todas as sessões*/
 section {
     margin: 5%;
@@ -147,6 +150,7 @@ section h2 {
     font-weight: bolder;
     text-shadow: var(--text-title-neon) 1px 1px 20px;
 }
+
 
 /* Estilo da sessão introdutória*/
 #imgBorder {
@@ -199,10 +203,12 @@ section h2 {
     text-shadow: var(--text-title-neon) 1px 1px 20px;
 }
 
+
 /* Estilo da sessão sobre mim */
 #aboutMe p{
     font-size: 1.2rem;
 }
+
 
 /* Estilo da sessão com as minhas habilidades */
 #techDescriptionContainer {
@@ -222,6 +228,7 @@ section h2 {
     border-radius: 10px;
 }
 
+
 /* Estilo da sessão dos meus projetos*/
 #projects button {
     background-color: var(--bg-btn-filter);
@@ -237,6 +244,7 @@ section h2 {
 #filterDescription {
     font-size: 1.2rem;
 }
+
 
 /* Estilo dos cards dos projetos */
 .card {
@@ -289,6 +297,7 @@ section h2 {
     border-radius: 5px;
 }
 
+
 /* Estilo do Form de Contato*/
 #contact {
     width: 100%;
@@ -322,7 +331,6 @@ section h2 {
     width: 2.5rem;
     height: 2.5rem;
 }
-
 .formLine{
     margin-top: 3%;
     width: 100%;
@@ -350,7 +358,6 @@ section h2 {
 }
 
 
-
 /* Estilo do rodapé*/
 footer {
     font-size: 1rem;
@@ -358,6 +365,7 @@ footer {
     background-color: var(--bg-footer-color);
 }
 
+/* Estilo do alerta */
 #alerta {
     position: fixed;
     bottom: 0;
@@ -368,7 +376,6 @@ footer {
     text-align: center;
     color:#000;
 }
-
 
 
 @media (max-width: 1366px) {
