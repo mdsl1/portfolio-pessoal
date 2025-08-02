@@ -150,7 +150,7 @@ async function enviarFormulario() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ nome, email, assunto ,mensagem })
+            body: JSON.stringify({ nome, email, assunto, mensagem })
         });
 
         if (!response.ok) {
