@@ -2,6 +2,7 @@
 
 //Variaveis globais
 const page = document.querySelector("html");
+const colorModeBtn = document.getElementById("colorModeBtn");
 let animationEnabled = true;
 
 function pauseAnimations() {
@@ -30,14 +31,34 @@ function pauseAnimations() {
     animationEnabled = !animationEnabled;
 }
 //Função que aplica a coloração padrão
-function defaultMode(){
-    page.classList.remove("lightMode", "colorBlindMode");
-    page.classList.add("defaultMode");
-}
-//Função que aplica a coloração escura
-function lightMode(){
-    page.classList.remove("defaultMode", "colorBlindMode");
-    page.classList.add("lightMode");
+colorModeBtn.addEventListener("click", function() {
+
+    page.classList.toggle("dark-mode");
+    page.classList.toggle("light-mode");
+
+    // Altera o texto do botão e salva a preferência no sessionStorage
+    if (page.classList.contains("light-mode")) {
+        colorModeBtn.textContent = "Modo Escuro";
+        sessionStorage.setItem("colorMode", "light-mode");
+    } else {
+        colorModeBtn.textContent = "Modo Claro";
+        sessionStorage.setItem("colorMode", "dark-mode");
+    }
+});
+
+// Função que verifica o modo de cor salvo no localStorage e aplica ao carregar a página
+function checkColorMode() {
+    const savedMode = sessionStorage.getItem("colorMode");
+    if (savedMode) {
+        page.classList.remove("light-mode", "dark-mode");
+        page.classList.add(savedMode);
+    }
+
+    if (page.classList.contains("light-mode")) {
+        colorModeBtn.textContent = "Modo Escuro";
+    } else {
+        colorModeBtn.textContent = "Modo Claro";
+    }
 }
 
 // Funções de interações com o site
@@ -84,3 +105,6 @@ function filterCards(filterType) {
         }
     });
 }
+
+// Chama a função de importar o JSON ao carregar a página
+document.addEventListener('DOMContentLoaded', checkColorMode);

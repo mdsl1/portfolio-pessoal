@@ -28,7 +28,6 @@
     --text-title-sections: #ff9500;
 
     /*Introdução*/
-    --img-url:url("../Midias/MyPhoto_ColorBlindMode.png");
     --text-title-neon: #ffc832;
     --text-p-neon: #fff;
 
@@ -66,6 +65,93 @@
     --bg-site-btn-color: #b78600;
     --border-site-btn-hover-color: #ffbb00;
     --text-site-btn-hover-color: #ffbb00;
+
+    /*Contato*/
+    /* Textos */
+    --text-contact-color: #6e6e6e;
+    --text-contact-color-hover: #ffffff;
+    /*background e border*/
+    --bg-contact-btn-color: #0000008a;
+
+    /*Footer*/
+    --text-footer-color: #fff;
+    --bg-footer-color: #000000da;
+}
+
+.light-mode:root {
+    /*GlassEffect*/
+    --bg-glassEffect: #9191918c;
+
+    /*Navbar*/
+    /* Textos */
+    --text-navbar-color: #2c2c2c;
+    --text-dropdown-controls-item-color: #fff;
+    --text-dropdown-controls-item-hover-color: #2c2c2c;
+    /* SVGs */
+    --svg-links-navbar-color: #515151;
+    --svg-controls-navbar-color: #565656;
+    --svg-controls-navbar-hover-color: #000000;
+    --svg-navbar-hover-dropshadow: #000000;
+    /* Backgrounds */
+    --bg-navbar-color: #b4b4b4da;
+    --bg-dropdown-controls-color: #161616c9;
+    --bg-dropdown-controls-item-hover-color: #8c8c8c;
+    /* Links das redes sociais */
+    --svg-github-color: #ffffff;
+    --svg-linkedin-color: #00ffd5;
+    --svg-gmail-color: #ff3030;
+    --svg-instagram-color: #ff00ae;
+    --svg-youtube-color: #f00;
+
+    /*Padrão das sessões*/
+    --text-sections: #1d1d1d;
+    --text-title-sections: #915400;
+
+    /*Introdução*/
+    --text-title-neon: #ffc832;
+    --text-p-neon: #fff;
+
+    /* Habilidades*/
+    --bg-tech-container: #fff;
+    --border-tech-container: #ff9500;
+
+    /*Projetos*/
+    /* Filtro de Projetos */
+    --bg-btn-filter: #bd6e00;
+    --border-btn-filter: #bd6e00;
+    --text-btn-filter: #000;
+    --text-btn-filter-hover: #bd6e00;
+
+    /*Cards*/
+    /* Textos */
+    --text-card-title-color: #ff9500;
+    --text-card-color: #fff;
+    --text-used-tech-color: #000;
+    /* SVG */
+    --svg-card-color: #fff;
+    /* Background e border*/
+    --bg-used-tech-color: #ff9500;
+    --bg-card-color: #00000086;
+    --border-card-color: #ff9500;
+    /* Botão github*/
+    --border-github-btn-color: #754600;
+    --text-github-btn-color: #fff;
+    --bg-github-btn-color: #754600;
+    --border-github-btn-hover-color: #ff9900;
+    --text-github-btn-hover-color: #ff9900;
+    /* Botão do site */
+    --border-site-btn-color: #b78600;
+    --text-site-btn-color: #fff;
+    --bg-site-btn-color: #b78600;
+    --border-site-btn-hover-color: #ffbb00;
+    --text-site-btn-hover-color: #ffbb00;
+
+    /*Contato*/
+    /* Textos */
+    --text-contact-color: #8e8e8e;
+    --text-contact-color-hover: #ffffff;
+    /*background e border*/
+    --bg-contact-btn-color: #000000b0;
 
     /*Footer*/
     --text-footer-color: #fff;

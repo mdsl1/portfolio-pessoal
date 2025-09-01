@@ -67,7 +67,7 @@
     top: 0;
     left: 0;
     z-index: -99;
-    background-color: var(--bg-glassEffect); /*919191a1*/
+    background-color: var(--bg-glassEffect);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     width: 100%;
@@ -313,7 +313,8 @@ section h2 {
     width: 100%;
     padding: 2% 5%;
     border-radius: 10px;
-    background-color: var(--bg-card-color);
+    color: var(--text-contact-color);
+    background-color: var(--bg-contact-btn-color);
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
@@ -322,6 +323,7 @@ section h2 {
 }
 #socialMediasContainer a:hover {
     background-color: #000;
+    color: var(--text-contact-color-hover);
 }
 #socialMediasContainer p {
     margin: 0;
