@@ -8,11 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Style.css">
   </head>
+
   <body>
+
+    <!-- Preloader -->
     <div id="preloader">
       <div class="spinner"></div>
     </div>
+
+    <!-- Conteúdo principal da página -->
     <main id="mainContent">
+      
       <!-- Navbar com os links de redes sociais e menu de configuração -->
       <nav id="navBar" class="navbar py-1 px-2 px-md-3 py-md-2 sticky-top">
         <div class="container-fluid px-0 w-100">
@@ -56,24 +62,27 @@
       <!-- Sessão introdutória, com uma foto e um texto de boas vindas -->
       <section id="introduction" class="container">
         <div class="row align-items-center">
+
           <!-- Coluna da imagem -->
           <div class="col-md-4 d-flex justify-content-center">
             <div id="imgBorder" class="girarBorda">
               <div id="myPhoto" class="container antiGirar"></div>
             </div>
           </div>
+
           <!-- Coluna do texto inicial -->
           <div class="col-md-8">
             <h1 class="text-center text-md-start">Bem vindo(a) ao meu Portólio.</h1>
             <p class="text-center text-md-start m-0">Sou Marcos Daniel da Silva Lima, <span>Desenvolvedor</strong></p>
           </div>
+
         </div>
       </section>
   
       <!-- Sessão sobre mim -->
       <section id="aboutMe" class="container text-justify col-10">
         <h2 class="mb-4 mb-md-5 text-center">Sobre Mim</h2>
-        <p>Sou um desenvolvedor de 21 anos, atualmente cursando o 2º semestre de Desenvolvimento de Software Multiplataforma na Fatec. Meu interesse começou com a criação de jogos no Scratch e evoluiu para projetos mais complexos em Python, C e front-end (HTML, CSS e JavaScript).</p>
+        <p>Sou um desenvolvedor de 22 anos, atualmente cursando o 3º semestre de Desenvolvimento de Software Multiplataforma na Fatec. Meu interesse começou com a criação de jogos no Scratch e evoluiu para projetos mais complexos em Python, C e front-end (HTML, CSS e JavaScript).</p>
         <p>Além disso, tenho interesse em automações com Inteligência Artificial e busco constantemente ampliar meu conhecimento por meio de projetos práticos.</p>
         <p class="m-0">Compartilho meus projetos em um canal no YouTube e mantenho um Instagram onde posto alguns projetos de designer, além de servir como meio de contato.</p>
       </section>
@@ -82,15 +91,17 @@
       <section id="technologies" class="container text-center col-12 col-md-10">
         <h2 class="mb-4 mb-md-5">Minhas Habilidades</h2>
         <p class="text-center">Clique em um ícone para ver a descrição:</p>
+        
         <!-- Grid com as imagens das linguagens -->
         <div id="techDescriptionContainer" class="d-grid gap-3 col-12 col-md-10 mx-auto p-3">
           <!-- Container onde os botões serão inseridos via js -->
-        </div> 
+        </div>
       </section>
   
       <!-- Sessão com os projetos e botões para filtrar por tipo de projeto -->
       <section id="projects" class="container">
         <h2 class="mb-4 mb-md-5 text-center">Meus Projetos</h2>
+
         <!-- Botões de filtro -->
         <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
           <button class="btn" onclick="filterCards('all')">Todos</button>
@@ -101,17 +112,21 @@
           <!-- button class="btn btn-dark" onclick="filterCards('desktop')">Apps Desktop</button>
           <button class="btn btn-dark" onclick="filterCards('mobile')">Apps Mobile</button-->
         </div>
+
         <p id="filterDescription" class="text-center">Aqui estão os meus principais projetos:</p>
+
         <!-- Cards -->
         <div class="row d-flex justify-content-center gap-5" id="cardContainer">
           <!-- Container onde os cards serão inseridos via js -->
         </div>
       </section>
       
+      <!-- Sessão de contato -->
       <section id="contact" class="container">
         <h2 class="mb-4 mb-md-5 text-center">Contato</h2>
         <div class="flex-row d-flex justify-content-between align-items-center flex-nowrap gap-5" id="contactContainer">
           
+          <!-- Coluna do texto de contato e botões com as redes sociais -->
           <div class="w-100 w-md-50 text-justify">
             <p>Estou em busca de novas oportunidades profissionais, colaborações em projetos desafiadores e conexões significativas com outros profissionais da área.</p>
             <p>Se você tiver uma proposta, ideia ou simplesmente quiser trocar experiências, será um prazer conversar!</p>
@@ -123,16 +138,17 @@
               <!--LinkedIn-->
               <a class="lnIcon" href="https://www.linkedin.com/in/marcos-daniel-da-silva-lima-091b11260/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.493675 -16.3118 99.61185 97.8708"><path d="M72.865 61.1094a1.2 1.2 0 001.21-1.269c0-.9-.543-1.33-1.657-1.33h-1.8v4.712h.677v-2.054h.832l.019.025 1.291 2.029h.724l-1.389-2.1zm-.783-.472h-.785v-1.593h.995c.514 0 1.1.084 1.1.757 0 .774-.593.836-1.314.836m-16.873-5.433h-9.6v-15.034c0-3.585-.064-8.2-4.993-8.2-5 0-5.765 3.906-5.765 7.939v15.294h-9.6v-30.916h9.216v4.225h.129a10.1 10.1 0 019.093-4.994c9.73 0 11.524 6.4 11.524 14.726zm-40.79-35.143a5.571 5.571 0 115.57-5.572 5.571 5.571 0 01-5.57 5.572m4.8 35.143h-9.61v-30.917h9.61zm40.776-55.2H4.781A4.728 4.728 0 000 4.6744v55.439a4.731 4.731 0 004.781 4.675h55.21a4.741 4.741 0 004.8-4.675V4.6704a4.738 4.738 0 00-4.8-4.67"/><path d="M72.164 56.4114a4.418 4.418 0 10.085 0h-.085m0 8.33a3.874 3.874 0 113.809-3.938v.065a3.791 3.791 0 01-3.708 3.871h-.1"/></svg><p>LinkedIn</p></a>
               <!--Gmail-->
-              <a class="mlIcon href="mailto:marcos.d.s.lima1408@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-13.2 -16.50405 114.4 99.0243"><path  d="M6 66.0162h14v-34l-20-15v43c0 3.315 2.685 6 6 6z"/><path d="M68 66.0162h14c3.315 0 6-2.685 6-6v-43l-20 15z"/><path d="M68 6.0162v26l20-15v-8c0-7.415-8.465-11.65-14.4-7.2z"/><path d="M20 32.0162v-26l24 18 24-18v26l-24 18z"/><path d="M0 9.0162v8l20 15v-26l-5.6-4.2c-5.935-4.45-14.4-.215-14.4 7.2z"/></svg><p>Gmail</p></a>
+              <a class="mlIcon" href="mailto:marcos.d.s.lima1408@gmail.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-13.2 -16.50405 114.4 99.0243"><path  d="M6 66.0162h14v-34l-20-15v43c0 3.315 2.685 6 6 6z"/><path d="M68 66.0162h14c3.315 0 6-2.685 6-6v-43l-20 15z"/><path d="M68 6.0162v26l20-15v-8c0-7.415-8.465-11.65-14.4-7.2z"/><path d="M20 32.0162v-26l24 18 24-18v26l-24 18z"/><path d="M0 9.0162v8l20 15v-26l-5.6-4.2c-5.935-4.45-14.4-.215-14.4 7.2z"/></svg><p>Gmail</p></a>
               <!--Instagram-->
               <a class="igIcon" href="https://www.instagram.com/mdsl.01/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-100.7682 -167.947 873.3244 1007.682"><path d="M335.895 0c-91.224 0-102.663.387-138.49 2.021-35.752 1.631-60.169 7.31-81.535 15.612-22.088 8.584-40.82 20.07-59.493 38.743-18.674 18.673-30.16 37.407-38.743 59.495C9.33 137.236 3.653 161.653 2.02 197.405.386 233.232 0 244.671 0 335.895c0 91.222.386 102.661 2.02 138.488 1.633 35.752 7.31 60.169 15.614 81.534 8.584 22.088 20.07 40.82 38.743 59.495 18.674 18.673 37.405 30.159 59.493 38.743 21.366 8.302 45.783 13.98 81.535 15.612 35.827 1.634 47.266 2.021 138.49 2.021 91.222 0 102.661-.387 138.488-2.021 35.752-1.631 60.169-7.31 81.534-15.612 22.088-8.584 40.82-20.07 59.495-38.743 18.673-18.675 30.159-37.407 38.743-59.495 8.302-21.365 13.981-45.782 15.612-81.534 1.634-35.827 2.021-47.266 2.021-138.488 0-91.224-.387-102.663-2.021-138.49-1.631-35.752-7.31-60.169-15.612-81.534-8.584-22.088-20.07-40.822-38.743-59.495-18.675-18.673-37.407-30.159-59.495-38.743-21.365-8.302-45.782-13.981-81.534-15.612C438.556.387 427.117 0 335.895 0zm0 60.521c89.686 0 100.31.343 135.729 1.959 32.75 1.493 50.535 6.965 62.37 11.565 15.68 6.094 26.869 13.372 38.622 25.126 11.755 11.754 19.033 22.944 25.127 38.622 4.6 11.836 10.072 29.622 11.565 62.371 1.616 35.419 1.959 46.043 1.959 135.73 0 89.687-.343 100.311-1.959 135.73-1.493 32.75-6.965 50.535-11.565 62.37-6.094 15.68-13.372 26.869-25.127 38.622-11.753 11.755-22.943 19.033-38.621 25.127-11.836 4.6-29.622 10.072-62.371 11.565-35.413 1.616-46.036 1.959-135.73 1.959-89.694 0-100.315-.343-135.73-1.96-32.75-1.492-50.535-6.964-62.37-11.564-15.68-6.094-26.869-13.372-38.622-25.127-11.754-11.753-19.033-22.943-25.127-38.621-4.6-11.836-10.071-29.622-11.565-62.371-1.616-35.419-1.959-46.043-1.959-135.73 0-89.687.343-100.311 1.959-135.73 1.494-32.75 6.965-50.535 11.565-62.37 6.094-15.68 13.373-26.869 25.126-38.622 11.754-11.755 22.944-19.033 38.622-25.127 11.836-4.6 29.622-10.072 62.371-11.565 35.419-1.616 46.043-1.959 135.73-1.959"/><path d="M335.895 447.859c-61.838 0-111.966-50.128-111.966-111.964 0-61.838 50.128-111.966 111.966-111.966 61.836 0 111.964 50.128 111.964 111.966 0 61.836-50.128 111.964-111.964 111.964zm0-284.451c-95.263 0-172.487 77.224-172.487 172.487 0 95.261 77.224 172.485 172.487 172.485 95.261 0 172.485-77.224 172.485-172.485 0-95.263-77.224-172.487-172.485-172.487m219.608-6.815c0 22.262-18.047 40.307-40.308 40.307-22.26 0-40.307-18.045-40.307-40.307 0-22.261 18.047-40.308 40.307-40.308 22.261 0 40.308 18.047 40.308 40.308"/></svg><p>Instagram</p></a>
               <!--Youtube-->
               <a class="ytIcon" href="https://www.youtube.com/@Mdsl-1" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-35.20005 -41.33325 305.0671 247.9995"><path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849"></svg><p>Youtube</p></a>
             </div>
-          
           </div>
 
+          <!-- Coluna do formulário de contato -->
           <form id="formContact" class="w-100 w-md-50 d-flex flex-column align-items-center">
+
             <div class="formLine d-flex flex-column">
               <label for="nome">Nome:</label>
               <input type="text" id="nome" name="nome" autocomplete="off">
@@ -155,16 +171,18 @@
 
             <button id="btnMsg" class="btn" type="submit">Enviar Mensagem</button>
           </form>
+        
         </div>
-
       </section>
 
+      <!-- Rodapé -->
       <footer class="p-2">
         <div class="container-fluid px-0 w-100 text-center">
           <p>&copy; Copyright 2024 - mdsl1. Todos os direitos reservados.</p>
         </div>
       </footer>
 
+      <!-- Alerta de sucesso ou erro ao enviar mensagem via formulário de contato -->
       <div class="container">
         <div id="alerta" class="alert alert-dismissible fade show d-none fixed-bottom mb-3" role="alert">
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
@@ -173,13 +191,15 @@
 
       <!-- Div para glass effect -->
       <div id="glassEffect"></div>
-  
+      
+      <!-- Vídeo de fundo -->
       <video autoplay muted loop id="backgroundVideo">
         <source src="Midias/black-hole-background.mp4" type="video/mp4">
       </video>
+
     </main>
 
-    <!-- Bootstrap JS e filtro -->
+    <!-- Imports do bootstrap e de arquivos .js para funcionamento do site -->
     <script src="js/Script.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
