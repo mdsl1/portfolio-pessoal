@@ -70,11 +70,11 @@ function renameDescryption(filterType) {
         all: "Aqui estão os meus principais projetos:",
         frontend: "Projetos focados em interfaces visuais usando HTML, CSS e JavaScript:",
         backend: "Projetos com lógica de servidor, banco de dados e APIs (Back-End):",
+        fullstack: "Projetos que envolvem tanto o Front-End quanto o Back-End:",
         logica: "Projetos com foco em lógica, algoritmos e estruturas de dados:",
         automacao: "Projetos de automação e scripts para tarefas repetitivas e produtividade:",
         desktop: "Projetos de aplicações com interface gráfica para uso em computador (Desktop):",
         mobile: "Projetos de aplicativos desenvolvidos para dispositivos móveis (Android):",
-
     };
     // Variável com o parágrafo onde o texto será alterado
     let filText = document.getElementById("filterDescription");
