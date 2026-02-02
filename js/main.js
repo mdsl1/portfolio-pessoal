@@ -1,12 +1,13 @@
 // Função para buscar os dados da API na rota de Projetos
 async function carregarProjetos() {
     try {
-        // Faz uma requisição para a API para buscar os projetos | https://api-portfolio-qs3s.onrender.com/projetos
-        const response = await fetch('https://deandrea-pushed-lynette.ngrok-free.dev/projetos', {
+        // Faz uma requisição para a API para buscar os projetos | https://deandrea-pushed-lynette.ngrok-free.dev/projetos
+        const response = await fetch('https://api-portfolio-qs3s.onrender.com/projetos', {
             method: 'GET',
+            /* Usado para consumir API localmente
             headers: {
                 "ngrok-skip-browser-warning": "true" // Temporário
-            }
+            }*/
         });
         if (!response.ok) {
             throw new Error('Erro ao buscar dados da API');
@@ -28,12 +29,13 @@ async function carregarProjetos() {
 // Função para buscar os dados da API na rota de Tecnologias
 async function carregarTecnologias() {
     try {
-        // Faz uma requisição para a API para buscar as tecnologias | https://api-portfolio-qs3s.onrender.com/tecnologias/show
-        const response = await fetch('https://deandrea-pushed-lynette.ngrok-free.dev/tecnologias/show', {
+        // Faz uma requisição para a API para buscar as tecnologias | https://deandrea-pushed-lynette.ngrok-free.dev/tecnologias/show
+        const response = await fetch('https://api-portfolio-qs3s.onrender.com/tecnologias/show', {
             method: 'GET',
+            /* Usado para consumir API localmente
             headers: {
                 "ngrok-skip-browser-warning": "true" // Temporário
-            }
+            }*/
         });
 
         if (!response.ok) {
@@ -158,12 +160,12 @@ async function enviarFormulario() {
     }
 
     try {
-        // Faz uma requisição POST para a API com os dados do formulário | https://api-portfolio-qs3s.onrender.com/mensagem
-        const response = await fetch('https://deandrea-pushed-lynette.ngrok-free.dev/mensagem', {
+        // Faz uma requisição POST para a API com os dados do formulário | https://deandrea-pushed-lynette.ngrok-free.dev/mensagem
+        const response = await fetch('https://api-portfolio-qs3s.onrender.com/mensagem', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                "ngrok-skip-browser-warning": "true" // Temporário
+                //"ngrok-skip-browser-warning": "true" / Temporário
             },
             body: JSON.stringify({ nome, email, assunto, mensagem })
         });
