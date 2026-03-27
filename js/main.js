@@ -1,4 +1,5 @@
 // Função para buscar os dados da API na rota de Projetos
+let listaProjetos = [];
 async function carregarProjetos() {
     try {
         // Faz uma requisição para a API para buscar os projetos | https://deandrea-pushed-lynette.ngrok-free.dev/projetos
@@ -14,9 +15,9 @@ async function carregarProjetos() {
         }
 
         // Pega os dados da API e armazena na variável projetos
-        const projetos = await response.json();
+        listaProjetos = await response.json();
         // Chama a função para criar os cards com os projetos
-        await createCards(projetos);
+        await createCards(listaProjetos, 4);
 
         // Chama a função para finalizar o preloader após carregar os projetos
         finalizarPreloader();
@@ -55,13 +56,16 @@ async function carregarTecnologias() {
 }
 
 // Função que cria e insere os cards
-async function createCards(projetos) {
+async function createCards(projetos, limite = null) {
+    
+    const projetosExibidos = limite ? projetos.slice(0, limite) : projetos;
+
     // Pega o container onde serão inseridos os cards e limpa eles inicialmente
     const container = document.getElementById("cardContainer");
     container.innerHTML = '';
 
     // Depois, para cada objeto no json, cria e preenche o card
-    projetos.forEach(projeto => {
+    projetosExibidos.forEach(projeto => {
         // Cria uma div e atribui as classes e data-filters
         let card = document.createElement('div');
         card.className = `col-10 col-lg-5 mb-4 card-item`;
@@ -250,3 +254,11 @@ btnMsg.addEventListener("click", (event) => {
 
 // Chama a função de importar o JSON ao carregar a página
 document.addEventListener('DOMContentLoaded', carregarTecnologias);
+
+document.getElementById('btnVerTodos').addEventListener('click', function() {
+    // Chama a função novamente, mas sem o limite de 4
+    createCards(listaProjetos);
+    
+    // Esconde o botão após mostrar tudo (ou remove o container dele)
+    document.getElementById('btnVerTodosContainer').style.display = 'none';
+});

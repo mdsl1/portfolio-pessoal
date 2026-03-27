@@ -325,6 +325,7 @@ section h2 {
 }
 #contactContainer p:not(a p) {
     margin-bottom: 2%;
+    width: 90%;
 }
 #contactContainer p:not(a p):last-of-type {
     margin-bottom: 7%;
@@ -356,7 +357,7 @@ section h2 {
 }
 .formLine{
     margin-top: 3%;
-    width: 100%;
+    width: 80%;
 }
 .formLine:first-of-type {
     margin: 0;
