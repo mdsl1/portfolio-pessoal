@@ -108,3 +108,29 @@ function filterCards(filterType) {
 
 // Chama a função de importar o JSON ao carregar a página
 document.addEventListener('DOMContentLoaded', checkColorMode);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hoje = new Date();
+    const inicioFacul = new Date("2024-08-05");
+    const aniversario = new Date("2003-08-14");
+
+    // Calculo da idade
+    let idade = hoje.getFullYear() - aniversario.getFullYear();
+    const difMeses = hoje.getMonth() - aniversario.getMonth();
+    if (difMeses < 0 || (difMeses === 0 && hoje.getDate() < aniversario.getDate())) {
+        idade--;
+    }
+    document.getElementById("idade").textContent = idade;
+
+    // Calculo do semestre da faculdade
+    let meses = (hoje.getFullYear() - inicioFacul.getFullYear()) * 12;
+    meses += (hoje.getMonth() - inicioFacul.getMonth());
+    if (hoje.getDate() < inicioFacul.getDate()) {
+        meses--;
+    }
+    let semestre = Math.floor(meses / 6) + 1;
+    document.getElementById("semestre").textContent = Math.max(1, semestre);
+
+    // Calculo do ano vigente
+    document.getElementById("ano").textContent = hoje.getFullYear();
+});
