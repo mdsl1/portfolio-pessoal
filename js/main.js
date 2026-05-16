@@ -31,7 +31,7 @@ async function carregarProjetos() {
 async function carregarTecnologias() {
     try {
         // Faz uma requisição para a API para buscar as tecnologias | https://deandrea-pushed-lynette.ngrok-free.dev/tecnologias/show
-        const response = await fetch('https://api-portfolio-qs3s.onrender.com/tecnologias/show', {
+        const response = await fetch('https://api-portfolio-qs3s.onrender.com/tecnologias/', {
             method: 'GET',
             /* Usado para consumir API localmente
             headers: {
@@ -165,7 +165,7 @@ async function enviarFormulario() {
 
     try {
         // Faz uma requisição POST para a API com os dados do formulário | https://deandrea-pushed-lynette.ngrok-free.dev/mensagem
-        const response = await fetch('https://api-portfolio-qs3s.onrender.com/mensagem', {
+        const response = await fetch('https://api-portfolio-qs3s.onrender.com/mensagens', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
