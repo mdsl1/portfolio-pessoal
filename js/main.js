@@ -149,7 +149,7 @@ function ativarPopovers() {
     popoverTriggerList.forEach(el => new bootstrap.Popover(el));
 }
 
-// Função que insere os dados do formulário no banco de dados
+// Função que envia os dados do formulário ao telegram via workflow n8n
 async function enviarFormulario() {
     // Pega os valores dos campos do formulário
     let nome = document.getElementById("nome").value;
@@ -164,12 +164,11 @@ async function enviarFormulario() {
     }
 
     try {
-        // Faz uma requisição POST para a API com os dados do formulário | https://deandrea-pushed-lynette.ngrok-free.dev/mensagem
-        const response = await fetch('https://api-portfolio-qs3s.onrender.com/mensagens', {
+        // Faz uma requisição POST para o webhook n8n com os dados do formulário | https://deandrea-pushed-lynette.ngrok-free.dev/mensagem
+        const response = await fetch('http://129.146.85.47:5678/webhook/699f355e-cdd3-47ed-9af4-1cb7e781c2ce', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                //"ngrok-skip-browser-warning": "true" / Temporário
             },
             body: JSON.stringify({ nome, email, assunto, mensagem })
         });
