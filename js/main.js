@@ -156,6 +156,7 @@ async function enviarFormulario() {
     let email = document.getElementById("email").value;
     let assunto = document.getElementById("assunto").value;
     let mensagem = document.getElementById("mensagem").value;
+    const timestamp = new Date();
 
     // Verifica se os campos estão preenchidos
     if (!nome || !email || !assunto || !mensagem) {
@@ -164,18 +165,30 @@ async function enviarFormulario() {
     }
 
     try {
-        // Faz uma requisição POST para o webhook n8n com os dados do formulário | https://deandrea-pushed-lynette.ngrok-free.dev/mensagem
-        const response = await fetch('http://129.146.85.47:5678/webhook/699f355e-cdd3-47ed-9af4-1cb7e781c2ce', {
+        // Faz uma requisição POST para o webhook n8n com os dados do formulário
+        const responseN8N = await fetch('https://n8n.mdsl1.com/webhook/699f355e-cdd3-47ed-9af4-1cb7e781c2ce', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ nome, email, assunto, mensagem, timestamp })
+        });
+        // Se a resposta não for OK, lança um erro
+        if (!responseN8N.ok) {
+            throw new Error('Erro ao enviar o formulário ao n8n');
+        }
+
+        // Faz uma requisição POST para a API na rota de mensagens com os dados do formulário
+        const responseDB = await fetch('https://api-portfolio-qs3s.onrender.com/mensagens', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ nome, email, assunto, mensagem })
         });
-
         // Se a resposta não for OK, lança um erro
-        if (!response.ok) {
-            throw new Error('Erro ao enviar o formulário');
+        if (!responseDB.ok) {
+            throw new Error('Erro ao enviar o formulário ao Supabase');
         }
 
         // Limpa os campos do formulário após o envio
@@ -187,8 +200,8 @@ async function enviarFormulario() {
         // Mostra uma mensagem de sucesso
         showAlert("Mensagem enviada com sucesso. Obrigado pelo contato!");
 
-    } catch (erro) {
-        console.error('Erro ao enviar o formulário:', erro);
+    } catch (er) {
+        console.error('Erro ao enviar o formulário:', er);
         showAlert("Ocorreu um erro ao enviar a mensagem. Por segurança, tente novamente mais tarde.");
     }
 }
